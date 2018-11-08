@@ -1,5 +1,5 @@
-#ifndef SHADER_HEADER
-#define SHADER_HEADER
+#ifndef TINYENGINE_SHADER_H
+#define TINYENGINE_SHADER_H
 
 #include <glad/glad.h>
 #include <string>

@@ -1,5 +1,5 @@
-#ifndef FRAME_BUFFER_HEADER
-#define FRAME_BUFFER_HEADER
+#ifndef TINYENGINE_FRAMEBUFFER_H
+#define TINYENGINE_FRAMEBUFFER_H
 
 #include <glad/glad.h>
 #include <vector>
@@ -31,12 +31,12 @@ namespace graph {
 		GLuint GetBufferID() const { return _buffer_id; }
 		GLenum GetBufferType() const { return _framebuffer_type; }
 
-		//fbo ��������
+
 		void AddAttachment(RenderBufferInfo info);
 		void AddAttachment(GLsizei width, GLsizei height, GLenum internalFormat, GLenum attachment);
 
 
-		//fbo״̬���
+
 		GLenum GetBufferStatus() ;
 		void PrintFrameBufferStatus(GLenum  status) ;
 

@@ -1,5 +1,5 @@
-#ifndef BUFFER_DATA_HEADER
-#define BUFFER_DATA_HEADER
+#ifndef TINYENGINE_BUFFERDATA_H
+#define TINYENGINE_BUFFERDATA_H
 
 #include <glad/glad.h>
 
@@ -27,7 +27,7 @@ namespace graph {
 			return _buffer_id;
 		}
 
-		//BufferData�������ݲ���
+		//Buffer数据操作
 		void SetData(GLsizeiptr size, const void * data, GLenum usage);
 		void SetSubData(GLintptr offset, GLsizeiptr size, const void * data);
 		void GetBufferSubData(GLintptr offset, GLsizeiptr size, void * data);

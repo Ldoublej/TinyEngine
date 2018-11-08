@@ -1,5 +1,5 @@
-#ifndef TEXTURE_HEADER
-#define TEXTURE_HEADER
+#ifndef TINYENGINE_TEXTURE_H
+#define TINYENGINE_TEXTURE_H
 
 #include <glad/glad.h>
 

@@ -1,5 +1,5 @@
-#ifndef PROGRAM_HEADER
-#define PROGRAM_HEADER
+#ifndef TINYENGINE_PROGRAM_H
+#define TINYENGINE_PROGRAM_H
 
 #include "Shader.h"
 #include <vector>

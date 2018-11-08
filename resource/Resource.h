@@ -1,5 +1,5 @@
-#ifndef RESOURCE_HEADER
-#define RESOURCE_HEADER
+#ifndef TINYENGINE_RESOURCE_H
+#define TINYENGINE_RESOURCE_H
 
 namespace resource {
 

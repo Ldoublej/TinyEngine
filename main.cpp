@@ -17,6 +17,7 @@ int main()
 
     /* Create a windowed mode window and its OpenGL context */
     window = glfwCreateWindow(800, 600, "Hello World", nullptr, nullptr);
+    glfwSetWindowPos(window,300,150);
     if (!window)
     {
         glfwTerminate();
@@ -102,7 +103,7 @@ int main()
         glUniform1f(s, a);
         glBindVertexArray(vao->GetBufferID());
         glDrawArrays(GL_TRIANGLES, 0, 3);
-        a -= 0.001;
+        a -= 0.003;
 
         glfwSwapBuffers(window);
 

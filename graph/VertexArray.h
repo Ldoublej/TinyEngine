@@ -1,5 +1,5 @@
-#ifndef VERTEX_ARRAY_HEADER
-#define VERTEX_ARRAY_HEADER
+#ifndef TINYENGINE_VERTEXARRAY_H
+#define TINYENGINE_VERTEXARRAY_H
 
 #include "VertexBuffer.h"
 #include "ElementBuffer.h"
@@ -20,8 +20,7 @@ namespace graph{
 
 	public:
 		static VertexArray * Create(GLenum primitiveType, ElementBuffer * ebo);
-		
-		//buffer id
+
 		GLuint GetBufferID()
 		{
 			return _buffer_id;
@@ -31,15 +30,13 @@ namespace graph{
 			return _primitive_type;
 		}
 
-		//buffer ����
 		void AddVertexBuffer(VertexBuffer * vbo);
 		ElementBuffer * GetElementBuffer() { return _ebo; }
 		VertexBuffer * GetVertexBuffer(int index);
 		int GetVertexBufferCount() { return _vbo_list.size(); }
 
-		//�ύ��������
 		void ApplyVertexAttributes();
-		void AddElementBuffer(ElementBuffer * ebo); //����VAO��ǰʹ�õ�EBO
+		void AddElementBuffer(ElementBuffer * ebo);
 
 	};
 

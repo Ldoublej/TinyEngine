@@ -1,5 +1,5 @@
-#ifndef VERTEX_BUFFER_HEADER
-#define VERTEX_BUFFER_HEADER
+#ifndef TINYENGINE_VERTEXBUFFER_H
+#define TINYENGINE_VERTEXBUFFER_H
 
 #include <glad/glad.h>
 #include <vector>
@@ -18,7 +18,7 @@ namespace graph {
 		GLuint index;
 		GLint size;
 		GLenum type;
-		GLboolean normalized;  //���attributeType����ΪIntegerType,��ô�ò���������
+		GLboolean normalized;
 		GLsizei stride;
 		const void * pointer;
 	};
@@ -35,7 +35,6 @@ namespace graph {
 	public:
 		static VertexBuffer * Create();
 
-		//vbo�������Բ���
 		void AddAttribute( GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const void * pointer,VBOAttribute::AttributeType attributeType = VBOAttribute::SinglePrecisionType);
 		void AddAttribute(VBOAttribute * attributes, int count);
 		VBOAttribute GetAttributeByIndex(int vaoIndex) = delete;

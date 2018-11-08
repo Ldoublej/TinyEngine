@@ -1,5 +1,5 @@
-#ifndef TEXTURE_RESOURCE_HEADER
-#define TEXTURE_RESOURCE_HEADER
+#ifndef TINYENGINE_TEXTURERESOURCE_H
+#define TINYENGINE_TEXTURERESOURCE_H
 
 #include "Resource.h"
 #include <string>
