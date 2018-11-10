@@ -23,6 +23,7 @@ namespace resource
         int GetWidth(int index);
         int GetHeight(int index);
         int GetChannelCount(int index);
+        int GetTexture2DCount(){return _texture2d_list.size();}
         std::string GetFileName(int index);
         bool IsLoad(){return _loaded;}
 
