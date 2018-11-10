@@ -1,8 +1,6 @@
-# TinyEngine
+# Simple-OGL
 
-这还不是一个引擎
-
-
+使你能更方便的学习OGL
 
 Colourful mipmap:
 

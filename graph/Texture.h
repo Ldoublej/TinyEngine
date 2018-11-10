@@ -1,5 +1,5 @@
-#ifndef TINYENGINE_TEXTURE_H
-#define TINYENGINE_TEXTURE_H
+#ifndef SIMPLEOGL_TEXTURE_H
+#define SIMPLEOGL_TEXTURE_H
 
 #include <glad/glad.h>
 
@@ -37,4 +37,4 @@ namespace graph {
 }
 
 
-#endif
+#endif//SIMPLEOGL_TEXTURE_H

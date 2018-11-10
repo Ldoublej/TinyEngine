@@ -1,5 +1,5 @@
-#ifndef TINYENGINE_TEXTURERE2DRESOURCE_H
-#define TINYENGINE_TEXTURERE2DRESOURCE_H
+#ifndef SIMPLEOGL_TEXTURERE2DRESOURCE_H
+#define SIMPLEOGL_TEXTURERE2DRESOURCE_H
 
 #include "Resource.h"
 #include <string>
@@ -34,4 +34,4 @@ namespace resource
 	};
 }
 
-#endif
+#endif //SIMPLEOGL_TEXTURERE2DRESOURCE_H

@@ -1,5 +1,5 @@
-#ifndef TINYENGINE_RESOURCE_H
-#define TINYENGINE_RESOURCE_H
+#ifndef SIMPLEOGL_RESOURCE_H
+#define SIMPLEOGL_RESOURCE_H
 
 namespace resource {
 
@@ -16,4 +16,4 @@ namespace resource {
 
 }
 
-#endif
+#endif //SIMPLEOGL_RESOURCE_H

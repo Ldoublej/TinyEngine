@@ -2,8 +2,8 @@
 // Created by ldoublej on 18-11-8.
 //
 
-#ifndef TINYENGINE_CUBEMAP_H
-#define TINYENGINE_CUBEMAP_H
+#ifndef SIMPLEOGL_CUBEMAP_H
+#define SIMPLEOGL_CUBEMAP_H
 
 #include "Texture.h"
 
@@ -27,4 +27,4 @@ namespace graph
 }
 
 
-#endif //TINYENGINE_CUBEMAP_H
+#endif //SIMPLEOGL_CUBEMAP_H

@@ -2,8 +2,8 @@
 // Created by ldoublej on 18-11-9.
 //
 
-#ifndef TINYENGINE_TEXTURE2DARRAY_H
-#define TINYENGINE_TEXTURE2DARRAY_H
+#ifndef SIMPLEOGL_TEXTURE2DARRAY_H
+#define SIMPLEOGL_TEXTURE2DARRAY_H
 
 #include "Texture.h"
 
@@ -31,4 +31,4 @@ namespace graph
 
 }
 
-#endif //TINYENGINE_TEXTURE2DARRAY_H
+#endif //SIMPLEOGL_TEXTURE2DARRAY_H

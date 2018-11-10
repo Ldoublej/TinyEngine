@@ -2,8 +2,8 @@
 // Created by ldoublej on 18-11-10.
 //
 
-#ifndef TINYENGINE_HELPER_H
-#define TINYENGINE_HELPER_H
+#ifndef SIMPLEOGL_HELPER_H
+#define SIMPLEOGL_HELPER_H
 
 #include "Texture2DArray.h"
 #include "../resource/Texture2DArrayResource.h"
@@ -22,4 +22,4 @@ namespace graph
     }
 }
 
-#endif //TINYENGINE_HELPER_H
+#endif //SIMPLEOGL_HELPER_H

@@ -1,5 +1,5 @@
-#ifndef TINYENGINE_VERTEXBUFFER_H
-#define TINYENGINE_VERTEXBUFFER_H
+#ifndef SIMPLEOGL_VERTEXBUFFER_H
+#define SIMPLEOGL_VERTEXBUFFER_H
 
 #include <glad/glad.h>
 #include <vector>
@@ -46,4 +46,4 @@ namespace graph {
 
 }
 
-#endif
+#endif //SIMPLEOGL_VERTEXBUFFER_H

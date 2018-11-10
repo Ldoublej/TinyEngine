@@ -1,5 +1,5 @@
-#ifndef TINYENGINE_VERTEXARRAY_H
-#define TINYENGINE_VERTEXARRAY_H
+#ifndef SIMPLEOGL_VERTEXARRAY_H
+#define SIMPLEOGL_VERTEXARRAY_H
 
 #include "VertexBuffer.h"
 #include "ElementBuffer.h"
@@ -42,4 +42,4 @@ namespace graph{
 
 }
 
-#endif
+#endif //SIMPLEOGL_VERTEXARRAY_H

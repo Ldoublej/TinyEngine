@@ -1,5 +1,5 @@
-#ifndef TINYENGINE_BUFFERDATA_H
-#define TINYENGINE_BUFFERDATA_H
+#ifndef SIMPLEOGL_VERTEXBUFFERBASE_H
+#define SIMPLEOGL_VERTEXBUFFERBASE_H
 
 #include <glad/glad.h>
 
@@ -39,4 +39,4 @@ namespace graph {
 	};
 }
 
-#endif
+#endif //SIMPLEOGL_VERTEXBUFFERBASE_H

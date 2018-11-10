@@ -7,5 +7,5 @@ set(CMAKE_CXX_STANDARD 11)
 add_subdirectory(graph)
 add_subdirectory(resource)
 
-add_executable(TinyEngine main.cpp 3rdpty/glad/glad.c)
-target_link_libraries(TinyEngine dl   glfw3  GL  X11  pthread  Xrandr  Xi graph resource)
+add_executable(ogl main.cpp 3rdpty/glad/glad.c)
+target_link_libraries(ogl dl   glfw3  GL  X11  pthread  Xrandr  Xi graph resource)

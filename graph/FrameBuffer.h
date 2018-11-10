@@ -1,5 +1,5 @@
-#ifndef TINYENGINE_FRAMEBUFFER_H
-#define TINYENGINE_FRAMEBUFFER_H
+#ifndef SIMPLEOGL_FRAMEBUFFER_H
+#define SIMPLEOGL_FRAMEBUFFER_H
 
 #include <glad/glad.h>
 #include <vector>
@@ -45,4 +45,4 @@ namespace graph {
 
 }
 
-#endif
+#endif  //SIMPLEOGL_FRAMEBUFFER_H

@@ -1,5 +1,5 @@
-#ifndef TINYENGINE_TEXTURE2D_H
-#define TINYENGINE_TEXTURE2D_H
+#ifndef SIMPLEOGL_TEXTURE2D_H
+#define SIMPLEOGL_TEXTURE2D_H
 
 #include "Texture.h"
 
@@ -26,4 +26,4 @@ namespace graph
 	};
 }
 
-#endif
+#endif //SIMPLEOGL_TEXTURE2D_H

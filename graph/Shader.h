@@ -1,5 +1,5 @@
-#ifndef TINYENGINE_SHADER_H
-#define TINYENGINE_SHADER_H
+#ifndef SIMPLEOGL_SHADER_H
+#define SIMPLEOGL_SHADER_H
 
 #include <glad/glad.h>
 #include <string>
@@ -32,4 +32,4 @@ namespace graph
 	};
 }
 
-#endif
+#endif//SIMPLEOGL_SHADER_H

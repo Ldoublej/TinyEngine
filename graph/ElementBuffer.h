@@ -1,5 +1,5 @@
-#ifndef TINYENGINE_ELEMENTBUFFER_H
-#define TINYENGINE_ELEMENTBUFFER_H
+#ifndef SIMPLEOGL_ELEMENTBUFFER_H
+#define SIMPLEOGL_ELEMENTBUFFER_H
 
 
 #include "VertexBufferBase.h"
@@ -24,4 +24,4 @@ namespace graph {
 	};
 }
 
-#endif
+#endif  //SIMPLEOGL_ELEMENTBUFFER_H

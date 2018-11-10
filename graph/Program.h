@@ -1,5 +1,5 @@
-#ifndef TINYENGINE_PROGRAM_H
-#define TINYENGINE_PROGRAM_H
+#ifndef SIMPLEOGL_PROGRAM_H
+#define SIMPLEOGL_PROGRAM_H
 
 #include "Shader.h"
 #include <vector>
@@ -41,4 +41,4 @@ namespace graph
 
 }
 
-#endif
+#endif	//SIMPLEOGL_PROGRAM_H
