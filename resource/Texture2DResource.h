@@ -1,5 +1,5 @@
-#ifndef TINYENGINE_TEXTURERESOURCE_H
-#define TINYENGINE_TEXTURERESOURCE_H
+#ifndef TINYENGINE_TEXTURERE2DRESOURCE_H
+#define TINYENGINE_TEXTURERE2DRESOURCE_H
 
 #include "Resource.h"
 #include <string>
@@ -7,26 +7,26 @@
 namespace resource 
 {
 
-	class TextureResource :public Resource
+	class Texture2DResource :public Resource
 	{
 	private:
 		std::string _file_name;
 		int _width;
 		int _height;
 		int _channels;
-		bool _loaded;
 		unsigned char * _data;
 	public:
-		TextureResource(const char * fileName) :_file_name(fileName),_loaded(false) {}
+		Texture2DResource(const char * fileName) :_file_name(fileName) {}
 		bool Load() override;
 		void Release() override;
 		unsigned char * GetData(){return _data;}
 		int GetWidth(){return _width;}
 		int GetHeight(){return _height;}
 		int GetChannelCount(){return _channels;}
+		std::string GetFileName(){return _file_name;};
 		bool IsLoad(){return _loaded;}
 
-		~TextureResource()
+		~Texture2DResource()
 		{
 			if (_loaded)
 				Release();

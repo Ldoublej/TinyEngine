@@ -1,7 +1,8 @@
 #include "../graph/Program.h"
 #include "../graph/VertexArray.h"
 #include "../graph/Texture2D.h"
-#include "../resource/TextureResource.h"
+#include "resource/Texture2DResource.h"
+#include "resource/Texture2DArrayResource.h"
 #include "../graph/Texture2DArray.h"
 #include <GLFW/glfw3.h>
 #include <glad/glad.h>
@@ -48,19 +49,19 @@ int main()
 
     //texture
     Texture2DArray * tex = Texture2DArray::Create(GL_RGB);
-    tex->Storage(0,256,256,3);
+    //tex->Storage(0,256,256,3);
     tex->TexImage(0,256,256,3,GL_RGB,GL_UNSIGNED_BYTE, nullptr);
+    const char * filenames[] = {
+            "Textures/Texture2DArray1.jpg",
+            "Textures/Texture2DArray2.jpg",
+            "Textures/Texture2DArray3.jpg"
+    };
 
-    TextureResource * image1 = new TextureResource("Textures/Texture2DArray1.jpg");
-    image1->Load();
-    TextureResource * image2 = new TextureResource("Textures/Texture2DArray2.jpg");
-    image2->Load();
-    TextureResource * image3 = new TextureResource("Textures/Texture2DArray3.jpg");
-    image3->Load();
+    Texture2DArrayResource * image = new Texture2DArrayResource(filenames,3);
 
-    tex->TexSubImage(0,0,0,0,256,256,1,GL_RGB,GL_UNSIGNED_BYTE,image1->GetData());
-    tex->TexSubImage(0,0,0,1,256,256,1,GL_RGB,GL_UNSIGNED_BYTE,image2->GetData());
-    tex->TexSubImage(0,0,0,2,256,256,1,GL_RGB,GL_UNSIGNED_BYTE,image3->GetData());
+    tex->TexSubImage(0,0,0,0,image->GetWidth(0),image->GetHeight(0),1,GL_RGB,GL_UNSIGNED_BYTE,image->GetData(0));
+    tex->TexSubImage(0,0,0,1,image->GetWidth(1),image->GetHeight(1),1,GL_RGB,GL_UNSIGNED_BYTE,image->GetData(1));
+    tex->TexSubImage(0,0,0,2,image->GetWidth(2),image->GetHeight(2),1,GL_RGB,GL_UNSIGNED_BYTE,image->GetData(2));
 
     GLint i = glGetUniformLocation(pro->GetBufferID(), "mainTex");
     glUniform1i(i, 1);
