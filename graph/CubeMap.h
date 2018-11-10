@@ -20,7 +20,7 @@ namespace graph
         void Storage(GLsizei levels,GLsizei width,GLsizei height);
         void TexImage(GLint level, GLsizei width, GLsizei height, GLenum format, GLenum type, const void * data);
         void TexParameter(GLenum para, GLenum value);
-
+        void EnableMipMap();
         ~CubeMap() { glDeleteTextures(1,&_buffer_id); };
     };
 

@@ -22,7 +22,7 @@ namespace graph
 
 		void EnableMipMap();
 
-		~Texture2D() { glDeleteTextures(1,&_buffer_id); };
+		~Texture2D() = default;
 	};
 }
 

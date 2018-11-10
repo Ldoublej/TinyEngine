@@ -2,6 +2,7 @@
 #include "../graph/VertexArray.h"
 #include "../graph/Texture2D.h"
 #include "../resource/TextureResource.h"
+#include "../graph/Texture2DArray.h"
 #include <GLFW/glfw3.h>
 #include <glad/glad.h>
 #include <iostream>
@@ -35,18 +36,7 @@ int main()
     using namespace graph;
     using namespace resource;
 
-    auto * image1 = new  TextureResource("Textures/1.jpg");
-    image1->Load();
-    auto * image2 = new  TextureResource("Textures/2.jpg");
-    image2->Load();
-    auto * image3 = new  TextureResource("Textures/3.jpg");
-    image3->Load();
-    auto * image4 = new  TextureResource("Textures/4.jpg");
-    image4->Load();
-    auto * image5 = new  TextureResource("Textures/5.jpg");
-    image5->Load();
-    auto * image6 = new  TextureResource("Textures/6.jpg");
-    image6->Load();
+
 
     //Shader
     Shader * vs = Shader::Creat(GL_VERTEX_SHADER, "Shader/mod.vert");
@@ -55,21 +45,26 @@ int main()
     pro->Compile();
     glUseProgram(pro->GetBufferID());
 
+
     //texture
+    Texture2DArray * tex = Texture2DArray::Create(GL_RGB);
+    tex->Storage(0,256,256,3);
+    tex->TexImage(0,256,256,3,GL_RGB,GL_UNSIGNED_BYTE, nullptr);
+
+    TextureResource * image1 = new TextureResource("Textures/Texture2DArray1.jpg");
+    image1->Load();
+    TextureResource * image2 = new TextureResource("Textures/Texture2DArray2.jpg");
+    image2->Load();
+    TextureResource * image3 = new TextureResource("Textures/Texture2DArray3.jpg");
+    image3->Load();
+
+    tex->TexSubImage(0,0,0,0,256,256,1,GL_RGB,GL_UNSIGNED_BYTE,image1->GetData());
+    tex->TexSubImage(0,0,0,1,256,256,1,GL_RGB,GL_UNSIGNED_BYTE,image2->GetData());
+    tex->TexSubImage(0,0,0,2,256,256,1,GL_RGB,GL_UNSIGNED_BYTE,image3->GetData());
+
     GLint i = glGetUniformLocation(pro->GetBufferID(), "mainTex");
     glUniform1i(i, 1);
 
-    GLint s = glGetUniformLocation(pro->GetBufferID(), "scale");
-
-
-    Texture2D * tex = Texture2D::Create(GL_RGB,GL_LINEAR_MIPMAP_LINEAR);
-    tex->TexParameter(GL_TEXTURE_MAX_LEVEL,5);
-    tex->TexImage(0,image1->GetWidth(),image1->GetHeight(),GL_RGB,GL_UNSIGNED_BYTE,image1->GetData());
-    tex->TexImage(1,image2->GetWidth(),image2->GetHeight(),GL_RGB,GL_UNSIGNED_BYTE,image2->GetData());
-    tex->TexImage(2,image3->GetWidth(),image3->GetHeight(),GL_RGB,GL_UNSIGNED_BYTE,image3->GetData());
-    tex->TexImage(3,image4->GetWidth(),image4->GetHeight(),GL_RGB,GL_UNSIGNED_BYTE,image4->GetData());
-    tex->TexImage(4,image5->GetWidth(),image5->GetHeight(),GL_RGB,GL_UNSIGNED_BYTE,image5->GetData());
-    tex->TexImage(5,image6->GetWidth(),image6->GetHeight(),GL_RGB,GL_UNSIGNED_BYTE,image6->GetData());
     //vertex data
     float vertices[] = {
             -0.5f, -0.5f, 0.0f,
@@ -90,24 +85,18 @@ int main()
 
     vao->ApplyVertexAttributes();
     glActiveTexture(GL_TEXTURE1);
-    glBindTexture(GL_TEXTURE_2D, tex->GetBufferID());
-    float a = 1.0f;
+    glBindTexture(GL_TEXTURE_2D_ARRAY,tex->GetBufferID());
 
-    /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(window))
     {
-        /* Render here */
         glClear(GL_COLOR_BUFFER_BIT);
         glClearColor(0.2, 0.2, 0.3, 1.0);
-        /* Swap front and back buffers */
-        glUniform1f(s, a);
+
         glBindVertexArray(vao->GetBufferID());
         glDrawArrays(GL_TRIANGLES, 0, 3);
-        a -= 0.003;
 
         glfwSwapBuffers(window);
 
-        /* Poll for and process events */
         glfwPollEvents();
     }
 

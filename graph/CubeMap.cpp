@@ -45,4 +45,10 @@ namespace graph
         glBindTexture(GL_TEXTURE_CUBE_MAP, 0);
     }
 
+    void CubeMap::EnableMipMap() {
+        glBindTexture(GL_TEXTURE_CUBE_MAP, _buffer_id);
+        glGenerateMipmap(GL_TEXTURE_CUBE_MAP);
+        glBindTexture(GL_TEXTURE_CUBE_MAP, 0);
+    }
+
 }
