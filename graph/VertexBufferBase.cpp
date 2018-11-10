@@ -1,31 +1,31 @@
-#include "BufferData.h"
+#include "VertexBufferBase.h"
 
 namespace graph {
 
 
 
-	void BufferData::SetData(GLsizeiptr size, const void * data, GLenum usage)
+	void VertexBufferBase::SetData(GLsizeiptr size, const void * data, GLenum usage)
 	{
 		glBindBuffer(_buffer_type, _buffer_id);
 		glBufferData(_buffer_type, size, data, usage);
 		glBindBuffer(_buffer_type, 0);
 	}
 
-	void BufferData::SetSubData(GLintptr offset, GLsizeiptr size, const void * data)
+	void VertexBufferBase::SetSubData(GLintptr offset, GLsizeiptr size, const void * data)
 	{
 		glBindBuffer(_buffer_type, _buffer_id);
 		glBufferSubData(_buffer_type, offset, size, data);
 		glBindBuffer(_buffer_type, 0);
 	}
 
-	void BufferData::GetBufferSubData(GLintptr offset, GLsizeiptr size, void * data)
+	void VertexBufferBase::GetBufferSubData(GLintptr offset, GLsizeiptr size, void * data)
 	{
 		glBindBuffer(_buffer_type, _buffer_id);
 		glGetBufferSubData(_buffer_type, offset, size, data);
 		glBindBuffer(_buffer_type, 0);
 	}
 
-	void * BufferData::MapBufferData(GLenum access)
+	void * VertexBufferBase::MapBufferData(GLenum access)
 	{
 		glBindBuffer(_buffer_type, _buffer_id);
 		void * d = glMapBuffer(_buffer_type, access);
@@ -34,7 +34,7 @@ namespace graph {
 
 	}
 
-	GLboolean BufferData::UnmapBufferData()
+	GLboolean VertexBufferBase::UnmapBufferData()
 	{
 		glBindBuffer(_buffer_type, _buffer_id);
 		GLboolean b =  glUnmapBuffer(_buffer_type);

@@ -14,12 +14,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5abf389b-198e-4ab8-b527-2f3dd20510ac" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/BufferData.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/graph/BufferBase.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/BufferData.h" beforeDir="false" afterPath="$PROJECT_DIR$/graph/BufferBase.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/ElementBuffer.h" beforeDir="false" afterPath="$PROJECT_DIR$/graph/ElementBuffer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/VertexBuffer.h" beforeDir="false" afterPath="$PROJECT_DIR$/graph/VertexBuffer.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resource/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/Resource.h" beforeDir="false" afterPath="$PROJECT_DIR$/resource/Resource.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/TextureResource.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/resource/Texture2DResource.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/TextureResource.h" beforeDir="false" afterPath="$PROJECT_DIR$/resource/Texture2DResource.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,25 +57,25 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="2014" />
-          <entry key="h" value="854" />
+          <entry key="cpp" value="2030" />
+          <entry key="h" value="862" />
           <entry key="txt" value="138" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="138" />
-          <entry key="ObjectiveC" value="2868" />
+          <entry key="ObjectiveC" value="2892" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="LICENSE" value="1" />
           <entry key="TinyEngine (disassembly)" value="2" />
-          <entry key="cpp" value="67" />
+          <entry key="cpp" value="69" />
           <entry key="gif" value="1" />
           <entry key="gitignore" value="1" />
-          <entry key="h" value="93" />
+          <entry key="h" value="95" />
           <entry key="md" value="1" />
           <entry key="txt" value="21" />
         </counts>
@@ -86,7 +85,7 @@
           <entry key="CMakeLists.txt" value="21" />
           <entry key="Disassembly" value="2" />
           <entry key="Image" value="1" />
-          <entry key="ObjectiveC" value="160" />
+          <entry key="ObjectiveC" value="164" />
           <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
@@ -103,11 +102,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="61" column="100" lean-forward="true" selection-start-line="61" selection-start-column="100" selection-end-line="61" selection-end-column="100" />
+            <state relative-caret-position="219">
+              <caret line="58" selection-start-line="58" selection-end-line="58" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -115,11 +114,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resource/CMakeLists.txt">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/graph/BufferBase.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+              <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/graph/BufferBase.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -149,7 +157,6 @@
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/graph/VertexArray.cpp" />
         <option value="$PROJECT_DIR$/graph/Program.cpp" />
-        <option value="$PROJECT_DIR$/graph/BufferData.h" />
         <option value="$PROJECT_DIR$/graph/ElementBuffer.h" />
         <option value="$PROJECT_DIR$/graph/FrameBuffer.h" />
         <option value="$PROJECT_DIR$/graph/Program.h" />
@@ -173,6 +180,9 @@
         <option value="$PROJECT_DIR$/resource/Texture2DArrayResource.h" />
         <option value="$PROJECT_DIR$/resource/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/graph/BufferData.h" />
+        <option value="$PROJECT_DIR$/graph/BufferBase.h" />
+        <option value="$PROJECT_DIR$/graph/BufferBase.cpp" />
       </list>
     </option>
   </component>
@@ -182,7 +192,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="109" />
     <option name="y" value="77" />
     <option name="width" value="1431" />
@@ -220,7 +230,7 @@
             <path>
               <item name="TinyEngine" type="b2602c69:ProjectViewProjectNode" />
               <item name="TinyEngine" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
+              <item name="graph" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -300,23 +310,23 @@
       <workItem from="1541740446579" duration="198000" />
       <workItem from="1541740659170" duration="245000" />
       <workItem from="1541811738257" duration="12975000" />
-      <workItem from="1541830795761" duration="283000" />
+      <workItem from="1541830795761" duration="2261000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32304000" />
+    <option name="totallyTimeSpent" value="34282000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1600" height="873" extended-state="7" />
+    <frame x="0" y="27" width="1600" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.250625" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24875" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32985657" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29335073" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29335073" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3976532" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -380,13 +390,6 @@
     <entry file="file://$PROJECT_DIR$/graph/ElementBuffer.cpp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/graph/BufferData.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/graph/FrameBuffer.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -398,13 +401,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="34" lean-forward="true" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph/Shader.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="27" lean-forward="true" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -430,13 +426,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graph/FrameBuffer.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="58" column="37" lean-forward="true" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/screenshot/colourful_mipmap.gif">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -447,13 +436,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/graph/Texture3D.h" />
-    <entry file="file://$PROJECT_DIR$/graph/BufferData.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/graph/Texture2D.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -562,6 +544,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/graph/Shader.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/FrameBuffer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="835">
+          <caret line="58" column="37" lean-forward="true" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resource/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -571,11 +567,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="61" column="100" lean-forward="true" selection-start-line="61" selection-start-column="100" selection-end-line="61" selection-end-column="100" />
+        <state relative-caret-position="219">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/BufferBase.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/BufferBase.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
         </state>
       </provider>
     </entry>

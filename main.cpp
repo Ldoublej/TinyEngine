@@ -58,7 +58,7 @@ int main()
     };
 
     Texture2DArrayResource * image = new Texture2DArrayResource(filenames,3);
-
+    image->Load();
     tex->TexSubImage(0,0,0,0,image->GetWidth(0),image->GetHeight(0),1,GL_RGB,GL_UNSIGNED_BYTE,image->GetData(0));
     tex->TexSubImage(0,0,0,1,image->GetWidth(1),image->GetHeight(1),1,GL_RGB,GL_UNSIGNED_BYTE,image->GetData(1));
     tex->TexSubImage(0,0,0,2,image->GetWidth(2),image->GetHeight(2),1,GL_RGB,GL_UNSIGNED_BYTE,image->GetData(2));

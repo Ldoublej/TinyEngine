@@ -5,7 +5,7 @@
 
 namespace graph {
 
-	class BufferData
+	class VertexBufferBase
 	{
 	protected:
 		GLuint _buffer_id;
@@ -14,7 +14,7 @@ namespace graph {
 
 		/*--------------------------------------------------------------------*/
 	protected:
-		BufferData(GLenum target)
+		VertexBufferBase(GLenum target)
 		{
 			_buffer_type = target;
 			glGenBuffers(1, &_buffer_id);
@@ -35,7 +35,7 @@ namespace graph {
 		void * MapBufferData(GLenum access);
 		GLboolean UnmapBufferData();
 
-		virtual ~BufferData() { glDeleteBuffers(1, &_buffer_id); };
+		virtual ~VertexBufferBase() { glDeleteBuffers(1, &_buffer_id); };
 	};
 }
 

@@ -2,16 +2,16 @@
 #define TINYENGINE_ELEMENTBUFFER_H
 
 
-#include "BufferData.h"
+#include "VertexBufferBase.h"
 
 namespace graph {
 
-	class ElementBuffer :public BufferData
+	class ElementBuffer :public VertexBufferBase
 	{
 	private:
 		int _index_size;
 	private:
-		ElementBuffer(int indexSize) :BufferData(GL_ELEMENT_ARRAY_BUFFER) , _index_size(indexSize) {}
+		ElementBuffer(int indexSize) :VertexBufferBase(GL_ELEMENT_ARRAY_BUFFER) , _index_size(indexSize) {}
 
 	public:
 		static ElementBuffer * Create(int indexCount);

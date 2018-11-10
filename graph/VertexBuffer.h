@@ -3,7 +3,7 @@
 
 #include <glad/glad.h>
 #include <vector>
-#include "BufferData.h"
+#include "VertexBufferBase.h"
 
 namespace graph {
 
@@ -23,14 +23,14 @@ namespace graph {
 		const void * pointer;
 	};
 
-	class VertexBuffer: public BufferData
+	class VertexBuffer: public VertexBufferBase
 	{
 	private:
 		std::vector<VBOAttribute> _attribute_list;
 
 		/*------------------------------------------------------------------------*/
 	private:
-		VertexBuffer() :BufferData(GL_ARRAY_BUFFER) {}
+		VertexBuffer() :VertexBufferBase(GL_ARRAY_BUFFER) {}
 
 	public:
 		static VertexBuffer * Create();
