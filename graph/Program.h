@@ -25,7 +25,7 @@ namespace graph
 
 		void AddShader(Shader * shader);
 		Shader * GetShader(GLenum type);
-		
+
 		bool Compile();
 
 		GLuint GetBufferID(){return _buffer_id;}

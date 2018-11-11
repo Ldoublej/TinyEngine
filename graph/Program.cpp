@@ -32,24 +32,40 @@ namespace graph
 	}
 	bool Program::Compile()
 	{
+	    //编译shader并附加shader
+
+	    if(_shaders.size() == 0)
+	        return false;
 		bool status = true;
 		for (unsigned int i = 0; i < _shaders.size(); ++i)
 		{
-			bool isSuccess;
-			isSuccess = _shaders[i]->Compile();
-			status = status && isSuccess;
-			if(isSuccess)
-				glAttachShader(_buffer_id, _shaders[i]->GetBufferID());
+			bool is_success;
+			Shader * shader = _shaders[i];
+			if(!shader->IsCompile())
+            {
+                is_success = shader->Compile();
+                status = status && is_success;
+            }
+            else
+            {
+                is_success = shader->IsAvailable();
+                status = status && is_success;
+            }
+            if(status)
+            {
+                glAttachShader(_buffer_id, shader->GetBufferID());
+            }
 		}
 		if (!status)
 		{
 			return false;
 		}
 
+		//链接Program
 		glLinkProgram(_buffer_id);
-		GLint isSuccess;
-		glGetProgramiv(_buffer_id, GL_LINK_STATUS, &isSuccess);
-		if (!isSuccess)
+		GLint is_success;
+		glGetProgramiv(_buffer_id, GL_LINK_STATUS, &is_success);
+		if (!is_success)
 		{
 			GLchar ch[1024];
 			glGetProgramInfoLog(_buffer_id, 1024, NULL, ch);

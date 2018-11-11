@@ -10,6 +10,7 @@ namespace graph
 
 		return shader;
 	}
+
 	Shader * Shader::Creat(GLenum type, const char * filename)
 	{
 		
@@ -30,25 +31,31 @@ namespace graph
 		shader->Source(c);
 		return shader;
 	}
+
 	void Shader::Source(const std::string source)
 	{
 		const char * p[1];
 		p[0] = source.c_str();
 		int length = source.length();
 		glShaderSource(_buffer_id, 1, p, &length);
+		_content.clear();
+		_content = source;
 	}
+
 	bool Shader::Compile()
 	{
 		glCompileShader(_buffer_id);
-		GLint isSucceess;
-		glGetShaderiv(_buffer_id, GL_COMPILE_STATUS, &isSucceess);
-		if (!isSucceess)
+		GLint is_success;
+		glGetShaderiv(_buffer_id, GL_COMPILE_STATUS, &is_success);
+		if (!is_success)
 		{
 			GLchar ch[1024];
 			glGetShaderInfoLog(_buffer_id, 1024, NULL, ch);
 			printf("%s", ch);
 			return false;
 		}
+        _is_compile = true;
+        _is_success = true;
 		return true;
 	}
 }
