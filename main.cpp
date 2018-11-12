@@ -7,11 +7,15 @@
 #include "../graph/Helper.h"
 #include <GLFW/glfw3.h>
 #include <glad/glad.h>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 #include <iostream>
 
 
 int main()
 {
+
     GLFWwindow* window;
 
     /* Initialize the library */
@@ -60,7 +64,10 @@ int main()
 
     GLint i = glGetUniformLocation(pro->GetBufferID(), "mainTex");
     glUniform1i(i, 1);
+    GLint u = glGetUniformLocation(pro->GetBufferID(), "M");
 
+    glm::mat4 trans  = glm::translate(glm::mat4(1.0f),glm::vec3(1.0,0.0,0.0));
+    glUniformMatrix4fv(u,1,GL_FALSE,glm::value_ptr(trans));
     //vertex data
     float vertices[] = {
             -0.5f, -0.5f, 0.0f,

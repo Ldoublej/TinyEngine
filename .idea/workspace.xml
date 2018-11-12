@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
-    <generated />
+    <generated>
+      <config projectName="TinyEngine" targetName="graph" />
+      <config projectName="TinyEngine" targetName="resource" />
+      <config projectName="TinyEngine" targetName="ogl" />
+    </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
@@ -9,7 +13,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5abf389b-198e-4ab8-b527-2f3dd20510ac" name="Default Changelist" comment="" />
+    <list default="true" id="5abf389b-198e-4ab8-b527-2f3dd20510ac" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +38,7 @@
     <expand />
     <select />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FUSProjectUsageTrigger">
     <session id="1578189427">
       <usages-collector id="statistics.lifecycle.project">
@@ -91,19 +99,19 @@
     <session id="1687976528">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.5" value="3" />
+          <entry key="project.open.time.6" value="4" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="cpp" value="13" />
           <entry key="gitignore" value="1" />
-          <entry key="h" value="43" />
+          <entry key="h" value="44" />
           <entry key="md" value="1" />
           <entry key="txt" value="1" />
         </counts>
@@ -112,13 +120,13 @@
         <counts>
           <entry key="CMakeLists.txt" value="1" />
           <entry key="Markdown" value="1" />
-          <entry key="ObjectiveC" value="56" />
+          <entry key="ObjectiveC" value="57" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="231" />
+          <entry key="cpp" value="495" />
           <entry key="h" value="367" />
           <entry key="txt" value="12" />
         </counts>
@@ -126,7 +134,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="12" />
-          <entry key="ObjectiveC" value="598" />
+          <entry key="ObjectiveC" value="862" />
         </counts>
       </usages-collector>
     </session>
@@ -143,10 +151,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../simple-ogl/main.cpp">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
+            <state relative-caret-position="226">
+              <caret line="68" column="65" selection-start-line="68" selection-start-column="65" selection-end-line="68" selection-end-column="65" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -242,7 +253,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -250,15 +260,11 @@
               <item name="TinyEngine" type="b2602c69:ProjectViewProjectNode" />
               <item name="simple-ogl" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="TinyEngine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="simple-ogl" type="462c0819:PsiDirectoryNode" />
-              <item name="3rdpty" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -280,12 +286,33 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+  <component name="RunManager" selected="Application.Build All">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="TinyEngine" RUN_TARGET_NAME="ogl" EXPLICIT_BUILD_TARGET_NAME="all">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="graph" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TinyEngine" TARGET_NAME="graph" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ogl" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TinyEngine" TARGET_NAME="ogl" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="TinyEngine" RUN_TARGET_NAME="ogl">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="resource" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TinyEngine" TARGET_NAME="resource" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Build All" />
+      <item itemvalue="Application.ogl" />
+      <item itemvalue="Application.graph" />
+      <item itemvalue="Application.resource" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -319,17 +346,21 @@
       <workItem from="1541906158392" duration="1906000" />
       <workItem from="1541908085471" duration="3390000" />
       <workItem from="1541915491963" duration="60000" />
+      <workItem from="1541915567548" duration="98000" />
+      <workItem from="1541916533275" duration="268000" />
+      <workItem from="1542015419475" duration="678000" />
+      <workItem from="1542028192667" duration="1177000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45874000" />
+    <option name="totallyTimeSpent" value="48095000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1600" height="873" extended-state="6" />
+    <frame x="67" y="27" width="1533" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2818533" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31136516" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -341,10 +372,10 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.28225806" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32392472" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32258064" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.500625" side_tool="true" weight="0.29335073" />
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="CMake" order="12" visible="true" weight="0.3293011" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.32841823" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -359,33 +390,33 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/graph/GraphSystem.h" />
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/graph/VertexArray.cpp">
+    <entry file="file://$PROJECT_DIR$/graph/VertexArray.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
           <caret line="67" column="93" selection-start-line="67" selection-start-column="93" selection-end-line="67" selection-end-column="93" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/graph/VertexBuffer.cpp">
+    <entry file="file://$PROJECT_DIR$/graph/VertexBuffer.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-268" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/screenshot/colourful_mipmap.gif">
+    <entry file="file://$PROJECT_DIR$/screenshot/colourful_mipmap.gif">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/LICENSE">
+    <entry file="file://$PROJECT_DIR$/LICENSE">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/graph/Texture3D.h" />
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/graph/Texture2D.cpp">
+    <entry file="file://$PROJECT_DIR$/graph/Texture2D.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="56" lean-forward="true" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/graph/Texture2DArray.cpp">
+    <entry file="file://$PROJECT_DIR$/graph/Texture2DArray.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="49">
           <caret line="29" column="50" lean-forward="true" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
@@ -399,229 +430,232 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/graph/FrameBuffer.cpp">
+    <entry file="file://$PROJECT_DIR$/graph/FrameBuffer.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="835">
           <caret line="58" column="37" lean-forward="true" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/resource/CMakeLists.txt">
+    <entry file="file://$PROJECT_DIR$/resource/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/graph/VertexBufferBase.cpp">
+    <entry file="file://$PROJECT_DIR$/graph/VertexBufferBase.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="71">
           <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/resource/Texture2DResource.cpp">
+    <entry file="file://$PROJECT_DIR$/resource/Texture2DResource.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/graph/CMakeLists.txt">
+    <entry file="file://$PROJECT_DIR$/graph/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/graph/Helper.cpp">
+    <entry file="file://$PROJECT_DIR$/graph/Helper.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/CMakeLists.txt">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/resource/Texture2DArrayResource.cpp">
+    <entry file="file://$PROJECT_DIR$/resource/Texture2DArrayResource.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="850">
           <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/graph/FrameBuffer.h">
+    <entry file="file://$PROJECT_DIR$/graph/FrameBuffer.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="362">
           <caret line="47" column="33" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/graph/Texture.h">
+    <entry file="file://$PROJECT_DIR$/graph/Texture.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="362">
           <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/graph/Texture2D.h">
+    <entry file="file://$PROJECT_DIR$/graph/Texture2D.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="362">
           <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/graph/Texture2DArray.h">
+    <entry file="file://$PROJECT_DIR$/graph/Texture2DArray.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
           <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/graph/VertexArray.h">
+    <entry file="file://$PROJECT_DIR$/graph/VertexArray.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="362">
           <caret line="44" column="32" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/graph/VertexBuffer.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/graph/VertexBufferBase.h">
+    <entry file="file://$PROJECT_DIR$/graph/VertexBufferBase.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="362">
           <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/resource/Resource.h">
+    <entry file="file://$PROJECT_DIR$/resource/Resource.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/graph/CubeMap.cpp">
+    <entry file="file://$PROJECT_DIR$/graph/CubeMap.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/graph/CubeMap.h">
+    <entry file="file://$PROJECT_DIR$/graph/CubeMap.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
           <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/graph/Helper.h">
+    <entry file="file://$PROJECT_DIR$/graph/Helper.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/graph/Texture.cpp">
+    <entry file="file://$PROJECT_DIR$/graph/Texture.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/.gitignore">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/graph/ElementBuffer.cpp">
+    <entry file="file://$PROJECT_DIR$/graph/ElementBuffer.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/graph/ElementBuffer.h">
+    <entry file="file://$PROJECT_DIR$/graph/ElementBuffer.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="16" column="48" lean-forward="true" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/resource/Texture2DResource.h">
+    <entry file="file://$PROJECT_DIR$/resource/Texture2DResource.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/resource/Texture2DArrayResource.h">
+    <entry file="file://$PROJECT_DIR$/resource/Texture2DArrayResource.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/graph/Shader.cpp">
+    <entry file="file://$PROJECT_DIR$/graph/Shader.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="73">
           <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/graph/Program.h">
+    <entry file="file://$PROJECT_DIR$/graph/Program.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/graph/Program.cpp">
+    <entry file="file://$PROJECT_DIR$/graph/Program.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
           <caret line="92" column="25" lean-forward="true" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/graph/Shader.h">
+    <entry file="file://$PROJECT_DIR$/graph/Shader.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="349">
           <caret line="26" column="44" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/README.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor />
           <second_editor />
         </state>
       </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/3rdpty/glad/glad.h">
+    <entry file="file://$PROJECT_DIR$/3rdpty/glad/glad.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
           <caret line="1770" column="52" lean-forward="true" selection-start-line="1770" selection-start-column="52" selection-end-line="1770" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../simple-ogl/main.cpp">
+    <entry file="file://$PROJECT_DIR$/graph/VertexBuffer.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="102">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="68" column="65" selection-start-line="68" selection-start-column="65" selection-end-line="68" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
