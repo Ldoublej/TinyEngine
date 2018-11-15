@@ -17,8 +17,8 @@ namespace graph
     {
         using namespace resource;
 
-        Texture2D * CreatTex2DByRes(Texture2DResource * res);
-        Texture2DArray * CreatTex2DArrayByRes(Texture2DArrayResource * res,int width,int height,GLenum internal_format,GLenum filter = GL_LINEAR, GLenum wrap = GL_REPEAT);
+        void SetImageData(Texture2DResource * res,Texture2D * texture2d);
+        void SetImageData(Texture2DArrayResource * res,Texture2DArray * texture2d_array);
     }
 }
 

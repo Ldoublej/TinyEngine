@@ -59,8 +59,8 @@ int main()
 
     Texture2DArrayResource * image = new Texture2DArrayResource(filenames,3);
     image->Load();
-
-    Texture2DArray * tex =  texhelper::CreatTex2DArrayByRes(image,256,256,GL_RGB);
+    Texture2DArray * tex = Texture2DArray::Create(GL_RGB);
+    texhelper::SetImageData(image,tex);
 
     GLint i = glGetUniformLocation(pro->GetBufferID(), "mainTex");
     glUniform1i(i, 1);
