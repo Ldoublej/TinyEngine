@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.12)
-project(TinyEngine)
+project(simple-ogl)
 
 include_directories(3rdpty)
 set(CMAKE_CXX_STANDARD 11)

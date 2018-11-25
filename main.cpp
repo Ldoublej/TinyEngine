@@ -64,9 +64,10 @@ int main()
 
     GLint i = glGetUniformLocation(pro->GetBufferID(), "mainTex");
     glUniform1i(i, 1);
+
     GLint u = glGetUniformLocation(pro->GetBufferID(), "M");
 
-    glm::mat4 trans  = glm::translate(glm::mat4(1.0f),glm::vec3(1.0,0.0,0.0));
+    glm::mat4 trans  = glm::translate(glm::mat4(1.0f),glm::vec3(0.0,0.0,0.0));
     glUniformMatrix4fv(u,1,GL_FALSE,glm::value_ptr(trans));
     //vertex data
     float vertices[] = {
