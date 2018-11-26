@@ -8,4 +8,4 @@ add_subdirectory(graph)
 add_subdirectory(resource)
 
 add_executable(ogl main.cpp 3rdpty/glad/glad.c)
-target_link_libraries(ogl dl   glfw3  GL  X11  pthread  Xrandr  Xi graph resource)
+target_link_libraries(ogl dl Xxf86vm glfw3  GL  X11  pthread  Xrandr Xinerama Xcursor Xi graph resource)

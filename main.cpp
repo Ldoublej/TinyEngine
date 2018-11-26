@@ -43,8 +43,8 @@ int main()
     using namespace resource;
 
     //Shader
-    Shader * vs = Shader::Creat(GL_VERTEX_SHADER, "Shader/mod.vert");
-    Shader * fs = Shader::Creat(GL_FRAGMENT_SHADER, "Shader/mod.frag");
+    Shader * vs = Shader::Creat(GL_VERTEX_SHADER, "shaders/mod.vert");
+    Shader * fs = Shader::Creat(GL_FRAGMENT_SHADER, "shaders/mod.frag");
     Program * pro = Program::Creat(vs, fs);
     pro->Compile();
     glUseProgram(pro->GetBufferID());
@@ -52,9 +52,9 @@ int main()
 
 
     const char * filenames[] = {
-            "Textures/Texture2DArray1.jpg",
-            "Textures/Texture2DArray2.jpg",
-            "Textures/Texture2DArray3.jpg"
+            "textures/Texture2DArray1.jpg",
+            "textures/Texture2DArray2.jpg",
+            "textures/Texture2DArray3.jpg"
     };
 
     Texture2DArrayResource * image = new Texture2DArrayResource(filenames,3);
