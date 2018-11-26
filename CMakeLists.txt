@@ -7,5 +7,5 @@ set(CMAKE_CXX_STANDARD 11)
 add_subdirectory(graph)
 add_subdirectory(resource)
 
-add_executable(ogl main.cpp 3rdpty/glad/glad.c)
+add_executable(ogl main.cpp 3rdpty/glad/glad.c Application.h TestTexture2DArray.h)
 target_link_libraries(ogl dl Xxf86vm glfw3  GL  X11  pthread  Xrandr Xinerama Xcursor Xi graph resource)
