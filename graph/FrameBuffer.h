@@ -1,7 +1,7 @@
 #ifndef SIMPLEOGL_FRAMEBUFFER_H
 #define SIMPLEOGL_FRAMEBUFFER_H
 
-#include <glad/glad.h>
+#include <GL/glew.h>
 #include <vector>
 #include <stdio.h>
 

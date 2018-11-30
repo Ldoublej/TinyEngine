@@ -1,7 +1,7 @@
 #ifndef SIMPLEOGL_VERTEXBUFFERBASE_H
 #define SIMPLEOGL_VERTEXBUFFERBASE_H
 
-#include <glad/glad.h>
+#include <GL/glew.h>
 
 namespace graph {
 

@@ -1,7 +1,7 @@
 #ifndef SIMPLEOGL_SHADER_H
 #define SIMPLEOGL_SHADER_H
 
-#include <glad/glad.h>
+#include <GL/glew.h>
 #include <string>
 #include <fstream>
 

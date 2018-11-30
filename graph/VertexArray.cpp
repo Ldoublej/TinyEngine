@@ -82,13 +82,14 @@ namespace graph {
 		glBindVertexArray(0);
 	}
 
-	void VertexArray::AddElementBuffer(ElementBuffer * ebo)
+	void VertexArray::SetElementBuffer(ElementBuffer * ebo)
 	{
-		if (ebo == nullptr && ebo->GetBufferID() == 0)
+		if (ebo == nullptr)
 			return;
 		_ebo = ebo;
 		glBindVertexArray(_buffer_id);
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,ebo->GetBufferID());
+		glBindVertexArray(0);
 	}
 
 

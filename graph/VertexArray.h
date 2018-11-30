@@ -36,7 +36,7 @@ namespace graph{
 		int GetVertexBufferCount() { return _vbo_list.size(); }
 
 		void ApplyVertexAttributes();
-		void AddElementBuffer(ElementBuffer * ebo);
+		void SetElementBuffer(ElementBuffer * ebo);
 
 	};
 

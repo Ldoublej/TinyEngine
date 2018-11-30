@@ -1,7 +1,7 @@
 #ifndef SIMPLEOGL_VERTEXBUFFER_H
 #define SIMPLEOGL_VERTEXBUFFER_H
 
-#include <glad/glad.h>
+#include <GL/glew.h>
 #include <vector>
 #include "VertexBufferBase.h"
 
@@ -35,6 +35,14 @@ namespace graph {
 	public:
 		static VertexBuffer * Create();
 
+		/// @brief
+		/// @param index 1
+		/// @param size 1
+		/// @param type 1
+		/// @param normalized 1
+		/// @param stride 1
+		/// @param pointer 1
+		/// @param attributeType 1
 		void AddAttribute( GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const void * pointer,VBOAttribute::AttributeType attributeType = VBOAttribute::SinglePrecisionType);
 		void AddAttribute(VBOAttribute * attributes, int count);
 		VBOAttribute GetAttributeByIndex(int vaoIndex) = delete;

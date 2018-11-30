@@ -25,12 +25,12 @@ public:
 private:
     graph::VertexArray * _vao;
 private:
-    bool Init() override
+    bool Init()
     {
         glViewport(0, 0, 800, 600);
         using namespace graph;
         using namespace resource;
-
+        
         //Shader
         Shader * vs = Shader::Creat(GL_VERTEX_SHADER, "shaders/mod.vert");
         Shader * fs = Shader::Creat(GL_FRAGMENT_SHADER, "shaders/mod.frag");

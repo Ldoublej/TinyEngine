@@ -15,7 +15,6 @@ namespace graph {
 
 	public:
 		static ElementBuffer * Create(int indexCount);
-		static ElementBuffer * Create();
 
 		void SetIndexSize(int indexSize){_index_size = indexSize;}
 		int GetIndexSize(){return _index_size;}

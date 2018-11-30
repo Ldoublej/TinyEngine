@@ -1,7 +1,7 @@
 #ifndef SIMPLEOGL_TEXTURE_H
 #define SIMPLEOGL_TEXTURE_H
 
-#include <glad/glad.h>
+#include <GL/glew.h>
 
 namespace graph {
 
@@ -31,7 +31,7 @@ namespace graph {
 		}
 
 
-		virtual ~Texture() ;
+		virtual ~Texture();
 	};
 
 }

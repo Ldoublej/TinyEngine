@@ -1,9 +1,9 @@
 #include <iostream>
-#include "TestTexture2DArray.h"
+#include "TestCEGUI.h"
 
 int main()
 {
-    TestTexture2DArray * app = new TestTexture2DArray(800,600,"Hello");
+    auto * app = new TestCEGUI(800,600,"Test Texture2DArray");
     app->Run();
     return 0;
 }
