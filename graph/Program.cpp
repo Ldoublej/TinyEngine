@@ -106,7 +106,7 @@ namespace graph
 	void Program::Unifrom4fv(const char *uniform, const GLfloat * mat4)
 	{
 		GLint id = glGetUniformLocation(this->_buffer_id,uniform);
-		glUniform4fv(id,1,mat4);
+		glUniformMatrix4fv(id,1,GL_FALSE,mat4);
 	}
 
 
