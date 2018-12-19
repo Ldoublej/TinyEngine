@@ -6,19 +6,19 @@
 #define SIMPLEOGL_HELPER_H
 
 #include "Texture2DArray.h"
-#include "../resource/Texture2DArrayResource.h"
+#include "../resource/Image2DArray.h"
 
 #include "Texture2D.h"
-#include "../resource/Texture2DResource.h"
+#include "../resource/Image2D.h"
 
 namespace graph
 {
-    namespace texhelper
+    namespace helper
     {
         using namespace resource;
 
-        void SetImageData(Texture2DResource * res,Texture2D * texture2d);
-        void SetImageData(Texture2DArrayResource * res,Texture2DArray * texture2d_array);
+        void SetImageData(Image2D * res,Texture2D * texture2d);
+        void SetImageData(Image2DArray * res,Texture2DArray * texture2d_array);
     }
 }
 

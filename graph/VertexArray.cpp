@@ -59,19 +59,19 @@ namespace graph {
 				VBOAttribute::AttributeType attType;
 				attType = att.attributeType;
 
-				if (attType == VBOAttribute::AttributeType::SinglePrecisionType)//Ӧ�ø����Ͷ�������
+				if (attType == VBOAttribute::AttributeType::SinglePrecisionType)//单精度
 				{
 					glBindBuffer(GL_ARRAY_BUFFER, vbo->GetBufferID());
 					glEnableVertexAttribArray(att.index);
 					glVertexAttribPointer(att.index, att.size, att.type, att.normalized, att.stride, att.pointer);
 				}
-				else if (attType == VBOAttribute::AttributeType::IntegerType)//Ӧ�����Ͷ�������
+				else if (attType == VBOAttribute::AttributeType::IntegerType)//整型
 				{
 					glBindBuffer(GL_ARRAY_BUFFER, vbo->GetBufferID());
 					glEnableVertexAttribArray(att.index);
 					glVertexAttribIPointer(att.index, att.size, att.type, att.stride, att.pointer);
 				}
-				else if (attType == VBOAttribute::AttributeType::DoublePrecisionType)//�ݲ�ʵ��
+				else if (attType == VBOAttribute::AttributeType::DoublePrecisionType)//双精度
 				{
 					//...
 				}

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
       <config projectName="simple-ogl" targetName="resource" />
       <config projectName="simple-ogl" targetName="ogl" />
@@ -14,396 +14,160 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5abf389b-198e-4ab8-b527-2f3dd20510ac" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glad/glad.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glad/glad.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/common.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/_features.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/_fixes.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/_noise.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/_swizzle.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/_swizzle_func.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/_vectorize.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/compute_common.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/compute_vector_relational.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/func_common.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/func_common_simd.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/func_exponential.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/func_exponential_simd.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/func_geometric.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/func_geometric_simd.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/func_integer.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/func_integer_simd.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/func_matrix.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/func_matrix_simd.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/func_packing.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/func_packing_simd.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/func_trigonometric.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/func_trigonometric_simd.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/func_vector_relational.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/func_vector_relational_simd.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/glm.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/qualifier.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/setup.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_float.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_half.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_half.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_mat2x2.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_mat2x2.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_mat2x3.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_mat2x3.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_mat2x4.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_mat2x4.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_mat3x2.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_mat3x2.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_mat3x3.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_mat3x3.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_mat3x4.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_mat3x4.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_mat4x2.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_mat4x2.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_mat4x3.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_mat4x3.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_mat4x4.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_mat4x4.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_mat4x4_simd.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_quat.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_quat.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_quat_simd.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_vec1.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_vec1.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_vec2.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_vec2.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_vec3.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_vec3.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_vec4.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_vec4.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/detail/type_vec4_simd.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/exponential.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_clip_space.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_clip_space.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_double2x2.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_double2x2_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_double2x3.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_double2x3_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_double2x4.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_double2x4_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_double3x2.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_double3x2_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_double3x3.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_double3x3_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_double3x4.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_double3x4_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_double4x2.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_double4x2_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_double4x3.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_double4x3_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_double4x4.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_double4x4_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_float2x2.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_float2x2_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_float2x3.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_float2x3_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_float2x4.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_float2x4_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_float3x2.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_float3x2_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_float3x3.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_float3x3_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_float3x4.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_float3x4_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_float4x2.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_float4x2_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_float4x3.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_float4x3_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_float4x4.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_float4x4_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_projection.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_projection.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_relational.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_relational.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_transform.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/matrix_transform.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/quaternion_common.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/quaternion_common.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/quaternion_common_simd.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/quaternion_double.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/quaternion_double_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/quaternion_exponential.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/quaternion_exponential.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/quaternion_float.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/quaternion_float_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/quaternion_geometric.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/quaternion_geometric.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/quaternion_relational.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/quaternion_relational.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/quaternion_transform.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/quaternion_transform.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/quaternion_trigonometric.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/quaternion_trigonometric.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/scalar_common.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/scalar_common.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/scalar_constants.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/scalar_constants.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/scalar_int_sized.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/scalar_relational.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/scalar_relational.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/scalar_uint_sized.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/scalar_ulp.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/scalar_ulp.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_bool1.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_bool1_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_bool2.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_bool2_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_bool3.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_bool3_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_bool4.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_bool4_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_common.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_common.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_double1.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_double1_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_double2.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_double2_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_double3.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_double3_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_double4.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_double4_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_float1.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_float1_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_float2.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_float2_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_float3.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_float3_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_float4.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_float4_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_int1.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_int1_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_int2.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_int2_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_int3.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_int3_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_int4.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_int4_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_relational.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_relational.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_uint1.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_uint1_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_uint2.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_uint2_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_uint3.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_uint3_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_uint4.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_uint4_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_ulp.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/ext/vector_ulp.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/fwd.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/geometric.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/glm.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/bitfield.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/bitfield.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/color_space.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/color_space.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/constants.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/constants.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/epsilon.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/epsilon.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/integer.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/integer.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/matrix_access.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/matrix_access.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/matrix_integer.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/matrix_inverse.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/matrix_inverse.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/matrix_transform.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/matrix_transform.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/noise.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/noise.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/packing.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/packing.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/quaternion.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/quaternion.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/quaternion_simd.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/random.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/random.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/reciprocal.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/reciprocal.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/round.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/round.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/type_aligned.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/type_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/type_precision.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/type_ptr.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/type_ptr.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/ulp.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/ulp.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtc/vec1.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/associated_min_max.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/associated_min_max.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/bit.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/bit.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/closest_point.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/closest_point.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/color_encoding.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/color_encoding.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/color_space.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/color_space.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/color_space_YCoCg.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/color_space_YCoCg.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/common.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/common.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/compatibility.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/compatibility.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/component_wise.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/component_wise.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/dual_quaternion.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/dual_quaternion.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/easing.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/easing.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/euler_angles.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/euler_angles.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/extend.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/extend.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/extended_min_max.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/extended_min_max.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/exterior_product.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/exterior_product.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/fast_exponential.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/fast_exponential.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/fast_square_root.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/fast_square_root.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/fast_trigonometry.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/fast_trigonometry.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/float_notmalize.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/functions.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/functions.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/gradient_paint.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/gradient_paint.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/handed_coordinate_space.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/handed_coordinate_space.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/hash.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/hash.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/integer.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/integer.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/intersect.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/intersect.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/io.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/io.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/log_base.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/log_base.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/matrix_cross_product.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/matrix_cross_product.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/matrix_decompose.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/matrix_decompose.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/matrix_factorisation.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/matrix_factorisation.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/matrix_interpolation.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/matrix_interpolation.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/matrix_major_storage.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/matrix_major_storage.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/matrix_operation.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/matrix_operation.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/matrix_query.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/matrix_query.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/matrix_transform_2d.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/matrix_transform_2d.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/mixed_product.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/mixed_product.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/norm.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/norm.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/normal.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/normal.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/normalize_dot.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/normalize_dot.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/number_precision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/number_precision.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/optimum_pow.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/optimum_pow.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/orthonormalize.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/orthonormalize.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/perpendicular.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/perpendicular.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/polar_coordinates.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/polar_coordinates.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/projection.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/projection.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/quaternion.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/quaternion.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/range.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/raw_data.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/raw_data.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/rotate_normalized_axis.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/rotate_normalized_axis.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/rotate_vector.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/rotate_vector.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/scalar_multiplication.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/scalar_relational.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/scalar_relational.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/spline.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/spline.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/std_based_type.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/std_based_type.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/string_cast.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/string_cast.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/texture.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/texture.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/transform.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/transform.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/transform2.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/transform2.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/type_aligned.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/type_aligned.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/type_trait.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/type_trait.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/vec_swizzle.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/vector_angle.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/vector_angle.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/vector_query.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/vector_query.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/wrap.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/gtx/wrap.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/integer.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/mat2x2.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/mat2x3.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/mat2x4.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/mat3x2.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/mat3x3.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/mat3x4.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/mat4x2.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/mat4x3.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/mat4x4.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/matrix.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/packing.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/simd/common.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/simd/exponential.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/simd/geometric.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/simd/integer.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/simd/matrix.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/simd/packing.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/simd/platform.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/simd/trigonometric.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/simd/vector_relational.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/trigonometric.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/vec2.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/vec3.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/vec4.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdpty/glm/vector_relational.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application.h" beforeDir="false" afterPath="$PROJECT_DIR$/Application.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCEGUI.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestTexture2DArray.h" beforeDir="false" afterPath="$PROJECT_DIR$/TestTexture2DArray.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/animations/GameMenu.anims" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/animations/example.anims" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/Batang-18.font" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/DejaVuSans-10-NoScale.font" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/DejaVuSans-10.font" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/DejaVuSans-12-NoScale.font" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/DejaVuSans-12.font" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/DejaVuSans-14-NoScale.font" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/DejaVuSans-14.font" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/DejaVuSans.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/DejaVuSerif.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/FairChar-30.font" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/FetteClassicUNZFraktur.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/Futhark Adapted.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/GreatVibes-16.font" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/GreatVibes-22.font" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/GreatVibes-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/IMFePIrm29P.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/Junicode-13.font" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/Junicode.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/Jura-10.font" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/Jura-13.font" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/Jura-18.font" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/Jura-DemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/Jura-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/Jura-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/Jura-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/Klingon-pIqaD-HaSta.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/Legal.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/LicenseApache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/LicenseDejaVu.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/LicenseGPL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/LicenseMIT.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/LicenseSIL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/LicenseUbuntuFont.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/RichStyle.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/Tnua-Libre.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/batang.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/fonts/mizufalp.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/imagesets/AlfiskoSkin.imageset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/imagesets/AlfiskoSkin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/imagesets/Aliasing.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/imagesets/BackgroundSampleBrowser.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/imagesets/DriveIcons.imageset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/imagesets/DriveIcons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/imagesets/FairChar.imageset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/imagesets/FairChar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/imagesets/GameMenu.imageset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/imagesets/GameMenu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/imagesets/HUDDemo.imageset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/imagesets/HUDDemo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/imagesets/HUDDemoGameOver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/imagesets/OgreTray.imageset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/imagesets/OgreTrayImages.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/imagesets/ReadMe.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/imagesets/SampleBrowser.imageset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/imagesets/SampleBrowser.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/imagesets/SpaceBackground.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/imagesets/TaharezLook.imageset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/imagesets/TaharezLook.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/imagesets/Vanilla.imageset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/imagesets/WindowsLook.imageset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/imagesets/WindowsLook.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/imagesets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/imagesets/vanilla.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/layouts/Console.wnd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/layouts/Demo8.layout" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/layouts/DragDropDemo.layout" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/layouts/EffectsDemo.layout" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/layouts/FontDemo.layout" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/layouts/GameMenu.layout" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/layouts/HUDDemoGameOver.layout" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/layouts/HUDDemoIngame.layout" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/layouts/SampleBrowser.layout" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/layouts/SampleBrowserLoadScreen.layout" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/layouts/TabControlDemo.layout" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/layouts/TabPage.layout" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/layouts/TabPage1.layout" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/layouts/TabPage2.layout" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/layouts/TaharezLookOverview.layout" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/layouts/TextDemo.layout" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/layouts/TreeDemoTaharez.layout" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/layouts/VanillaConsole.layout" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/layouts/VanillaLookOverview.layout" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/layouts/VanillaWindows.layout" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/layouts/application_templates.layout" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/looknfeel/AlfiskoSkin.looknfeel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/looknfeel/GameMenu.looknfeel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/looknfeel/Generic.looknfeel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/looknfeel/HUDDemo.looknfeel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/looknfeel/InventoryComponents.looknfeel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/looknfeel/OgreTray.looknfeel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/looknfeel/SampleBrowser.looknfeel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/looknfeel/TaharezLook.looknfeel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/looknfeel/Vanilla.looknfeel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/looknfeel/VanillaCommonDialogs.looknfeel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/looknfeel/WindowsLook.looknfeel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/lua_scripts/demo8.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/schemes/AlfiskoSkin.scheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/schemes/GameMenu.scheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/schemes/Generic.scheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/schemes/HUDDemo.scheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/schemes/OgreTray.scheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/schemes/SampleBrowser.scheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/schemes/TaharezLook.scheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/schemes/VanillaCommonDialogs.scheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/schemes/VanillaSkin.scheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/schemes/WindowsLook.scheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/xml_schemas/Animation.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/xml_schemas/CEGUIConfig.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/xml_schemas/Falagard.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/xml_schemas/Font.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/xml_schemas/GUILayout.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/xml_schemas/GUIScheme.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/xml_schemas/Imageset.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datafiles/xml_schemas/Samples.xsd" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/graph/CubeMap.h" beforeDir="false" afterPath="$PROJECT_DIR$/graph/CubeMap.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/ElementBuffer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/graph/ElementBuffer.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/ElementBuffer.h" beforeDir="false" afterPath="$PROJECT_DIR$/graph/ElementBuffer.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/FrameBuffer.h" beforeDir="false" afterPath="$PROJECT_DIR$/graph/FrameBuffer.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/Shader.h" beforeDir="false" afterPath="$PROJECT_DIR$/graph/Shader.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/Texture.h" beforeDir="false" afterPath="$PROJECT_DIR$/graph/Texture.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/Helper.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/graph/Helper.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/Helper.h" beforeDir="false" afterPath="$PROJECT_DIR$/graph/Helper.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/Program.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/graph/Program.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/Program.h" beforeDir="false" afterPath="$PROJECT_DIR$/graph/Program.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/Texture2DArray.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/graph/Texture2DArray.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/graph/VertexArray.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/graph/VertexArray.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/VertexArray.h" beforeDir="false" afterPath="$PROJECT_DIR$/graph/VertexArray.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/VertexBuffer.h" beforeDir="false" afterPath="$PROJECT_DIR$/graph/VertexBuffer.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/VertexBufferBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/graph/VertexBufferBase.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Car1.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Car8.fbm/Car08Diffuse.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Car8.fbm/Car08Tire.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Car8.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Cube.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Platform.fbm/Platform06_Diffuse.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Platform.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resource/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/Texture2DArrayResource.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/resource/Image2DArray.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/Texture2DArrayResource.h" beforeDir="false" afterPath="$PROJECT_DIR$/resource/Image2DArray.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/Texture2DResource.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/resource/Image2D.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/Texture2DResource.h" beforeDir="false" afterPath="$PROJECT_DIR$/resource/Image2D.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shaders/mod.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shaders/mod.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/Texture2DArray1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/Texture2DArray2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/Texture2DArray3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/wall.jpg" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -427,131 +191,25 @@
     <select />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
-  <component name="FUSProjectUsageTrigger">
-    <session id="1578189427">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="13" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.5" value="6" />
-          <entry key="project.open.time.6" value="6" />
-          <entry key="project.opened" value="15" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="cpp" value="2475" />
-          <entry key="h" value="1181" />
-          <entry key="txt" value="143" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="CMakeLists.txt" value="143" />
-          <entry key="ObjectiveC" value="3656" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="LICENSE" value="1" />
-          <entry key="TinyEngine (disassembly)" value="2" />
-          <entry key="cpp" value="81" />
-          <entry key="gif" value="1" />
-          <entry key="gitignore" value="1" />
-          <entry key="h" value="111" />
-          <entry key="md" value="1" />
-          <entry key="txt" value="26" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CMakeLists.txt" value="26" />
-          <entry key="Disassembly" value="2" />
-          <entry key="Image" value="1" />
-          <entry key="ObjectiveC" value="192" />
-          <entry key="PLAIN_TEXT" value="3" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="-1575725898">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="1687976528">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="43" />
-          <entry key="project.open.time.0" value="3" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.3" value="3" />
-          <entry key="project.open.time.4" value="11" />
-          <entry key="project.open.time.5" value="10" />
-          <entry key="project.open.time.6" value="12" />
-          <entry key="project.open.time.7" value="4" />
-          <entry key="project.open.time.8" value="2" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="47" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="LICENSE" value="1" />
-          <entry key="c" value="1" />
-          <entry key="cpp" value="38" />
-          <entry key="frag" value="1" />
-          <entry key="gitignore" value="1" />
-          <entry key="h" value="118" />
-          <entry key="md" value="1" />
-          <entry key="txt" value="8" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CMakeLists.txt" value="8" />
-          <entry key="Markdown" value="1" />
-          <entry key="ObjectiveC" value="157" />
-          <entry key="PLAIN_TEXT" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="cpp" value="1121" />
-          <entry key="h" value="1602" />
-          <entry key="txt" value="45" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="CMakeLists.txt" value="45" />
-          <entry key="Doxygen file" value="4" />
-          <entry key="ObjectiveC" value="2719" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="-116521931">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="1" lean-forward="true" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+            <state relative-caret-position="68">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TestTexture2DArray.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
+              <folding>
+                <element signature="e#43#67#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -578,11 +236,9 @@
         <option value="$PROJECT_DIR$/graph/FrameBuffer.cpp" />
         <option value="$PROJECT_DIR$/graph/CubeMap.cpp" />
         <option value="$PROJECT_DIR$/graph/Texture3D.h" />
-        <option value="$PROJECT_DIR$/graph/Texture2DArray.cpp" />
         <option value="$PROJECT_DIR$/resource/TextureResource.cpp" />
         <option value="$PROJECT_DIR$/resource/TextureResource.h" />
         <option value="$PROJECT_DIR$/resource/Texture2DResource.cpp" />
-        <option value="$PROJECT_DIR$/resource/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/graph/BufferData.h" />
         <option value="$PROJECT_DIR$/graph/BufferBase.cpp" />
         <option value="$PROJECT_DIR$/graph/BufferBase.h" />
@@ -590,62 +246,43 @@
         <option value="$PROJECT_DIR$/graph/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/graph/Texture2DArray.h" />
         <option value="$PROJECT_DIR$/resource/Resource.h" />
-        <option value="$PROJECT_DIR$/resource/Texture2DArrayResource.h" />
-        <option value="$PROJECT_DIR$/resource/Texture2DResource.h" />
-        <option value="$PROJECT_DIR$/graph/Program.cpp" />
-        <option value="$PROJECT_DIR$/graph/Program.h" />
         <option value="$PROJECT_DIR$/graph/Shader.cpp" />
-        <option value="$PROJECT_DIR$/graph/Helper.cpp" />
         <option value="$PROJECT_DIR$/TestTexture2DArray.cpp" />
-        <option value="$PROJECT_DIR$/TestTexture2DArray.h" />
         <option value="$PROJECT_DIR$/graph/Texture2D.h" />
-        <option value="$PROJECT_DIR$/graph/CubeMap.h" />
         <option value="$PROJECT_DIR$/graph/ElementBuffer.h" />
         <option value="$PROJECT_DIR$/graph/ElementBuffer.cpp" />
         <option value="$PROJECT_DIR$/graph/VertexArray.h" />
-        <option value="$PROJECT_DIR$/graph/VertexArray.cpp" />
-        <option value="$PROJECT_DIR$/graph/Helper.h" />
-        <option value="$PROJECT_DIR$/Application.h" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/TestCEGUI.h" />
         <option value="$PROJECT_DIR$/graph/Texture.h" />
         <option value="$PROJECT_DIR$/graph/VertexBufferBase.h" />
-        <option value="$PROJECT_DIR$/graph/FrameBuffer.h" />
         <option value="$PROJECT_DIR$/graph/Shader.h" />
         <option value="$PROJECT_DIR$/graph/VertexBuffer.h" />
+        <option value="$PROJECT_DIR$/TestCEGUI.h" />
+        <option value="$PROJECT_DIR$/Application.h" />
+        <option value="$PROJECT_DIR$/graph/CubeMap.h" />
+        <option value="$PROJECT_DIR$/graph/Texture2DArray.cpp" />
+        <option value="$PROJECT_DIR$/graph/VertexArray.cpp" />
+        <option value="$PROJECT_DIR$/graph/Helper.cpp" />
+        <option value="$PROJECT_DIR$/graph/Helper.h" />
+        <option value="$PROJECT_DIR$/resource/Texture2DResource.h" />
+        <option value="$PROJECT_DIR$/resource/Texture2DArrayResource.h" />
+        <option value="$PROJECT_DIR$/resource/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/resource/Image2D.h" />
+        <option value="$PROJECT_DIR$/resource/Image2DArray.h" />
+        <option value="$PROJECT_DIR$/graph/FrameBuffer.h" />
+        <option value="$PROJECT_DIR$/graph/Program.h" />
+        <option value="$PROJECT_DIR$/graph/Program.cpp" />
+        <option value="$PROJECT_DIR$/TestTexture2DArray.h" />
         <option value="$PROJECT_DIR$/main.cpp" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="109" />
-    <option name="y" value="51" />
+    <option name="y" value="36" />
     <option name="width" value="1431" />
-    <option name="height" value="799" />
-  </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State />
-          <State>
-            <id>C/C++</id>
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>Type checksC/C++</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
+    <option name="height" value="814" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -655,7 +292,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -667,6 +303,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -795,32 +432,62 @@
       <workItem from="1543555749046" duration="2000" />
       <workItem from="1543572716126" duration="5133000" />
       <workItem from="1543588256914" duration="1585000" />
+      <workItem from="1543590564921" duration="21000" />
+      <workItem from="1543590747123" duration="1807000" />
+      <workItem from="1543592663765" duration="15000" />
+      <workItem from="1543592967071" duration="10000" />
+      <workItem from="1543593039672" duration="79000" />
+      <workItem from="1543744724222" duration="127000" />
+      <workItem from="1543745548354" duration="884000" />
+      <workItem from="1543755225736" duration="822000" />
+      <workItem from="1543758604322" duration="155000" />
+      <workItem from="1543928041645" duration="564000" />
+      <workItem from="1543928618631" duration="149000" />
+      <workItem from="1543929162210" duration="42000" />
+      <workItem from="1543929910647" duration="200000" />
+      <workItem from="1544104347932" duration="543000" />
+      <workItem from="1544970237155" duration="722000" />
+      <workItem from="1544971049263" duration="94000" />
+      <workItem from="1544972510747" duration="278000" />
+      <workItem from="1544972827615" duration="117000" />
+      <workItem from="1545020669434" duration="189000" />
+      <workItem from="1545021767817" duration="742000" />
+      <workItem from="1545037450801" duration="2389000" />
+      <workItem from="1545040932544" duration="674000" />
+      <workItem from="1545041676799" duration="213000" />
+      <workItem from="1545041902158" duration="383000" />
+      <workItem from="1545042471302" duration="519000" />
+      <workItem from="1545054045259" duration="1497000" />
+      <workItem from="1545144911871" duration="455000" />
+      <workItem from="1545145378222" duration="412000" />
+      <workItem from="1545145802599" duration="614000" />
+      <workItem from="1545146579093" duration="43000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75078000" />
+    <option name="totallyTimeSpent" value="89837000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1600" height="850" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17074743" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25224647" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959327" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49899125" weight="0.32299012" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49899125" weight="0.33936024" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39551193" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.30042315" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.31752306" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.29485396" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.31571627" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50100875" side_tool="true" weight="0.30241936" />
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="CMake" order="12" weight="0.32806325" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.32684284" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -830,44 +497,12 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/graph/VertexBuffer.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-268" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screenshot/colourful_mipmap.gif">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/graph/Texture3D.h" />
-    <entry file="file://$PROJECT_DIR$/graph/Texture2D.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="56" lean-forward="true" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/stdlib.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="868" column="13" selection-start-line="868" selection-start-column="13" selection-end-line="868" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/Texture2DResource.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -881,38 +516,10 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/resource/Texture2DResource.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/Texture2DArrayResource.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/Texture2DArrayResource.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph/CubeMap.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -923,111 +530,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shaders/mod.frag">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/3rdpty/glad/glad.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-32545">
-          <caret line="1770" column="52" selection-start-line="1770" selection-start-column="52" selection-end-line="1770" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/3rdpty/glad/glad.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="1798" column="30" lean-forward="true" selection-start-line="1798" selection-start-column="30" selection-end-line="1798" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph/Texture2DArray.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="50" lean-forward="true" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph/Texture2D.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="79" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph/VertexBufferBase.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph/ElementBuffer.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph/FrameBuffer.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-129">
-          <caret line="58" column="37" lean-forward="true" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph/ElementBuffer.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="48" lean-forward="true" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph/CubeMap.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph/VertexArray.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="82" column="5" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph/VertexArray.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="18" column="63" lean-forward="true" selection-start-line="18" selection-start-column="63" selection-end-line="18" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/3rdpty/glad/glad.h" />
+    <entry file="file://$PROJECT_DIR$/3rdpty/glad/glad.c" />
     <entry file="file://$PROJECT_DIR$/graph/Texture2DArray.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph/Program.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph/Program.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph/Helper.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
@@ -1038,39 +546,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graph/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph/Helper.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LICENSE">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file:///usr/local/include/cegui-0/CEGUI/Base.h" />
     <entry file="file:///usr/local/include/cegui-0/CEGUI/RendererModules/OpenGL/RendererBase.h" />
-    <entry file="file:///usr/local/include/CEGUI/RendererModules/OpenGL/RendererBase.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/include/CEGUI/Base.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///usr/local/include/CEGUI/RendererModules/OpenGL/RendererBase.h" />
+    <entry file="file:///usr/local/include/CEGUI/Base.h" />
     <entry file="file:///usr/include/GL/glew.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -1078,27 +560,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-493">
-          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/include/CEGUI/DefaultResourceProvider.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="67" column="9" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph/VertexBuffer.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///usr/local/include/CEGUI/DefaultResourceProvider.h" />
     <entry file="file://$PROJECT_DIR$/graph/Shader.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1106,55 +568,224 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graph/FrameBuffer.h">
+    <entry file="file://$PROJECT_DIR$/shaders/mod.vert" />
+    <entry file="file://$PROJECT_DIR$/shaders/mod.frag" />
+    <entry file="file://$PROJECT_DIR$/TestCEGUI.h" />
+    <entry file="file://$PROJECT_DIR$/graph/CubeMap.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        <state relative-caret-position="196">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graph/VertexBufferBase.h">
+    <entry file="file://$PROJECT_DIR$/Application.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
-          <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+        <state relative-caret-position="323">
+          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+          <folding>
+            <element signature="e#77#97#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/ElementBuffer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/ElementBuffer.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/Texture2DArray.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="53" column="32" lean-forward="true" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/CubeMap.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/VertexBuffer.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/VertexArray.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-357">
+          <caret line="15" column="63" selection-start-line="15" selection-start-column="63" selection-end-line="15" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/VertexArray.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/VertexBuffer.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/VertexBufferBase.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/graph/Texture.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="-68">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestCEGUI.h">
+    <entry file="file://$PROJECT_DIR$/graph/Texture2D.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="61" column="40" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
-          <folding>
-            <element signature="e#75#99#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="76" lean-forward="true" selection-start-line="10" selection-start-column="76" selection-end-line="10" selection-end-column="76" />
+        <state relative-caret-position="153">
+          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestTexture2DArray.h">
+    <entry file="file://$PROJECT_DIR$/resource/Image2D.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-527">
-          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        <state relative-caret-position="254">
+          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource/Image2D.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/Texture2D.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="26" column="85" selection-start-line="26" selection-start-column="79" selection-end-line="26" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/FrameBuffer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136">
+          <caret line="58" column="37" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/Program.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-20">
+          <caret line="92" column="9" lean-forward="true" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource/Image2DArray.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource/Image2DArray.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/Helper.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding>
+            <element signature="e#98#125#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/Helper.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/Program.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/VertexBufferBase.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/FrameBuffer.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="e#65#85#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="1" lean-forward="true" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+        <state relative-caret-position="68">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestTexture2DArray.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="e#43#67#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -9,7 +9,6 @@
 
 namespace graph
 {
-
     class CubeMap:public Texture
     {
     private:

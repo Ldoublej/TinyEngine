@@ -84,7 +84,6 @@ namespace graph
 		}
 		return nullptr;
 	}
-
 	void Program::AddShader(Shader * shader)
 	{
 		auto it = std::find_if(_shaders.begin(), _shaders.end(), std::bind(_compare_shader, std::placeholders::_1, shader->GetShaderType()));
@@ -98,6 +97,17 @@ namespace graph
 		}
 	}
 
+    void Program::Unifrom1i(const char *uniform, GLint v0)
+    {
+		GLint id = glGetUniformLocation(this->_buffer_id,uniform);
+		glUniform1i(id,v0);
+    }
+
+	void Program::Unifrom4fv(const char *uniform, const GLfloat * mat4)
+	{
+		GLint id = glGetUniformLocation(this->_buffer_id,uniform);
+		glUniform4fv(id,1,mat4);
+	}
 
 
 	bool _compare_shader(Shader * shader, GLenum type)

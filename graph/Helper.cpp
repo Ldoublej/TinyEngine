@@ -6,16 +6,16 @@
 
 namespace graph
 {
-    namespace texhelper
+    namespace helper
     {
-        void SetImageData(Texture2DResource * res,Texture2D * texture2d)
+        void SetImageData(Image2D * res,Texture2D * texture2d)
         {
             if(!res->IsLoad())
                 return;
             texture2d->TexImage(0,res->GetWidth(),res->GetHeight(),GL_RGB,GL_UNSIGNED_BYTE,res->GetData());
 
         }
-        void SetImageData(Texture2DArrayResource * res,Texture2DArray * texture2d_array)
+        void SetImageData(Image2DArray * res,Texture2DArray * texture2d_array)
         {
             if(!res->IsLoad())
                 return;

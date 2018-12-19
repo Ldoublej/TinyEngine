@@ -7,14 +7,10 @@
 #include "../graph/Program.h"
 #include "../graph/VertexArray.h"
 #include "../graph/Texture2D.h"
-#include "resource/Texture2DResource.h"
-#include "resource/Texture2DArrayResource.h"
+#include "resource/Image2D.h"
+#include "resource/Image2DArray.h"
 #include "../graph/Texture2DArray.h"
 #include "../graph/Helper.h"
-
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtc/type_ptr.hpp>
 
 #include <iostream>
 
@@ -46,18 +42,13 @@ private:
                 "textures/Texture2DArray3.jpg"
         };
 
-        Texture2DArrayResource * image = new Texture2DArrayResource(filenames,3);
+        Image2DArray * image = new Image2DArray(filenames,3);
         image->Load();
         Texture2DArray * tex = Texture2DArray::Create(GL_RGB);
-        texhelper::SetImageData(image,tex);
+        helper::SetImageData(image,tex);
 
-        GLint i = glGetUniformLocation(pro->GetBufferID(), "mainTex");
-        glUniform1i(i, 1);
+        pro->Unifrom1i("mainTex",1);
 
-        GLint u = glGetUniformLocation(pro->GetBufferID(), "M");
-
-        glm::mat4 trans  = glm::translate(glm::mat4(1.0f),glm::vec3(0.0,0.0,0.0));
-        glUniformMatrix4fv(u,1,GL_FALSE,glm::value_ptr(trans));
         //vertex data
         float vertices[] = {
                 -0.5f, -0.5f, 0.0f,
