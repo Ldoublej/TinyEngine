@@ -20,7 +20,7 @@ namespace scene
         _target.y = sinf(glm::radians(_pitch));
         _target.z = cosf(glm::radians(_pitch)) * sinf(glm::radians(_yaw));
 
-        _up.x = cosf(glm::radians(_pitch)) * cosf(glm::radians(_yaw));
+        _up.x = cosf(glm::radians(_pitch+90)) * cosf(glm::radians(_yaw));
         _up.y = sinf(glm::radians(_pitch+90));
         _up.z = cosf(glm::radians(_pitch+90)) * sinf(glm::radians(_yaw));
 

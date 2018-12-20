@@ -8,6 +8,8 @@
 #include "../graph/Texture2DArray.h"
 #include "../graph/Helper.h"
 #include "scene/Camera.h"
+#include "scene/Model.h"
+
 scene::Camera * camera;
 float lastX = 400, lastY = 300;
 float deltaTime = 0.0f; // 当前帧与上一帧的时间差
@@ -45,19 +47,19 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
             glfwSetWindowShouldClose(window, GL_TRUE);
             break;
         case GLFW_KEY_W:
-            loc += camera->GetTarget() * 1.0f *deltaTime;
+            loc += camera->GetTarget() * 2.0f *deltaTime;
             camera->SetWorld(loc);
             break;
         case GLFW_KEY_S:
-            loc -= camera->GetTarget() * 1.0f *deltaTime;
+            loc -= camera->GetTarget() * 2.0f *deltaTime;
             camera->SetWorld(loc);
             break;
         case GLFW_KEY_A:
-            loc -= right * 0.5f *deltaTime;
+            loc -= right * 2.0f *deltaTime;
             camera->SetWorld(loc);
             break;
         case GLFW_KEY_D:
-            loc += right * 0.5f *deltaTime;
+            loc += right * 2.0f *deltaTime;
             camera->SetWorld(loc);
             break;
     }
@@ -73,7 +75,7 @@ int main()
     glfwSetWindowPos(_window,300,150);
     glfwSetKeyCallback(_window, key_callback);
     glfwSetCursorPosCallback(_window, mouse_button_callback);
-    glfwSetInputMode(_window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+    //glfwSetInputMode(_window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
     if (!_window)
     {
         glfwTerminate();
@@ -105,55 +107,30 @@ int main()
     Program * pro = Program::Creat(vs, fs);
     pro->Compile();
     glUseProgram(pro->GetBufferID());
+    Model * mod = new Model("models/JT.obj");
 
 
 
-    const char * filenames[] = {
-            "textures/Texture2DArray1.jpg",
-            "textures/Texture2DArray2.jpg",
-            "textures/Texture2DArray3.jpg"
-    };
-
-    Image2DArray * image = new Image2DArray(filenames,3);
+    Image2D * image = new Image2D("textures/JT.tga");
     image->Load();
-    Texture2DArray * tex = Texture2DArray::Create(GL_RGB);
+    Texture2D * tex = Texture2D::Create(GL_RGB);
     helper::SetImageData(image,tex);
 
     pro->Unifrom1i("mainTex",1);
     pro->Unifrom4fv("P",&projection[0][0]);
 
-
-    //vertex data
-    float vertices[] = {
-            -0.5f, -0.5f, -10.0f,
-            0.0f,0.0f,
-            0.5f, -0.5f, -10.0f,
-            1.0f,0.0f,
-            0.0f,  0.5f, -10.0f,
-            0.5f,1.0f
-    };
-
-    VertexBuffer * vertexdata = VertexBuffer::Create();
-    vertexdata->SetData(sizeof(vertices), vertices, GL_STATIC_DRAW);
-    vertexdata->AddAttribute( 0, 3, GL_FLOAT, GL_FALSE, 5*sizeof(float), 0);
-    vertexdata->AddAttribute(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void *) (3 * sizeof(float)));
-
-    VertexArray * _vao = VertexArray::Create(GL_LINE, nullptr);
-    _vao->AddVertexBuffer(vertexdata);
-
-    _vao->ApplyVertexAttributes();
     glActiveTexture(GL_TEXTURE1);
-    glBindTexture(GL_TEXTURE_2D_ARRAY,tex->GetBufferID());
-
+    glBindTexture(GL_TEXTURE_2D,tex->GetBufferID());
+    glEnable(GL_DEPTH_TEST);
     while (!glfwWindowShouldClose(_window))
     {
         glm::mat4 view = camera->GetViewMatrix();
         pro->Unifrom4fv("V",&view[0][0]);
-        glClear(GL_COLOR_BUFFER_BIT);
         glClearColor(0.2, 0.2, 0.3, 1.0);
-        glBindVertexArray(_vao->GetBufferID());
-        glDrawArrays(GL_TRIANGLES, 0, 3);
+        glClearDepth(1.0);
+        glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 
+        mod->Draw();
 
         float currentFrame = glfwGetTime();
         deltaTime = currentFrame - lastFrame;

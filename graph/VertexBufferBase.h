@@ -14,7 +14,7 @@ namespace graph {
 
 		/*--------------------------------------------------------------------*/
 	protected:
-		VertexBufferBase(GLenum target)
+		explicit VertexBufferBase(GLenum target):_buffer_id(0)
 		{
 			_buffer_type = target;
 			glGenBuffers(1, &_buffer_id);

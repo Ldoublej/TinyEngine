@@ -5,7 +5,7 @@ namespace graph {
 
 	VertexBuffer * VertexBuffer::Create()
 	{
-		VertexBuffer * vbo = new VertexBuffer();
+		auto * vbo = new VertexBuffer();
 		if (vbo->GetBufferID() == 0)
 			return nullptr;
 		return vbo;
@@ -13,7 +13,7 @@ namespace graph {
 
 	void VertexBuffer::AddAttribute( GLuint index, GLint size, GLenum type,GLboolean normalized, GLsizei stride, const void * pointer, VBOAttribute::AttributeType attributeType)
 	{
-		VBOAttribute att;
+		VBOAttribute att = VBOAttribute();
 		att.attributeType = attributeType;
 		att.index = index;
 		att.size = size;
@@ -34,6 +34,4 @@ namespace graph {
 			_attribute_list.push_back(attributes[i]);
 		}
 	}
-
-
 }

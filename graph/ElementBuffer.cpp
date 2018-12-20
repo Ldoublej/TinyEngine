@@ -3,9 +3,9 @@
 namespace graph {
 
 
-	ElementBuffer * ElementBuffer::Create(int indexSize)
+	ElementBuffer * ElementBuffer::Create()
 	{
-		ElementBuffer * ebo = new ElementBuffer(indexSize);
+		ElementBuffer * ebo = new ElementBuffer();
 		if (ebo->GetBufferID() == 0)
 			return nullptr;
 		return ebo;
