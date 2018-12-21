@@ -47,19 +47,19 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
             glfwSetWindowShouldClose(window, GL_TRUE);
             break;
         case GLFW_KEY_W:
-            loc += camera->GetTarget() * 2.0f *deltaTime;
+            loc += camera->GetTarget() * 2000.0f *deltaTime;
             camera->SetWorld(loc);
             break;
         case GLFW_KEY_S:
-            loc -= camera->GetTarget() * 2.0f *deltaTime;
+            loc -= camera->GetTarget() * 2000.0f *deltaTime;
             camera->SetWorld(loc);
             break;
         case GLFW_KEY_A:
-            loc -= right * 2.0f *deltaTime;
+            loc -= right * 2000.0f *deltaTime;
             camera->SetWorld(loc);
             break;
         case GLFW_KEY_D:
-            loc += right * 2.0f *deltaTime;
+            loc += right * 2000.0f *deltaTime;
             camera->SetWorld(loc);
             break;
     }
@@ -75,7 +75,7 @@ int main()
     glfwSetWindowPos(_window,300,150);
     glfwSetKeyCallback(_window, key_callback);
     glfwSetCursorPosCallback(_window, mouse_button_callback);
-    //glfwSetInputMode(_window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+    glfwSetInputMode(_window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
     if (!_window)
     {
         glfwTerminate();
@@ -89,7 +89,6 @@ int main()
     {
         fprintf(stderr, "Error: %s\n", glewGetErrorString(err));
         exit (-2);
-
     }
 
     glViewport(0, 0, 800, 600);
@@ -98,39 +97,37 @@ int main()
     using namespace scene;
 
     camera = new Camera();
-    glm::mat4 projection;
-    projection = glm::perspective(glm::radians(45.0f), 800.0f / 600.0f, 0.1f, 1000.0f);
+
 
     //Shader
-    Shader * vs = Shader::Creat(GL_VERTEX_SHADER, "shaders/mod.vert");
-    Shader * fs = Shader::Creat(GL_FRAGMENT_SHADER, "shaders/mod.frag");
+    Shader * vs = Shader::Creat(GL_VERTEX_SHADER, "shaders/basic.vert");
+    Shader * fs = Shader::Creat(GL_FRAGMENT_SHADER, "shaders/basic.frag");
     Program * pro = Program::Creat(vs, fs);
     pro->Compile();
     glUseProgram(pro->GetBufferID());
-    Model * mod = new Model("models/JT.obj");
-
-
-
-    Image2D * image = new Image2D("textures/JT.tga");
-    image->Load();
-    Texture2D * tex = Texture2D::Create(GL_RGB);
-    helper::SetImageData(image,tex);
-
-    pro->Unifrom1i("mainTex",1);
+    pro->Unifrom1i("_DiffuseMap",1);
+    pro->Unifrom1i("_NormalMap",2);
+    glm::mat4 projection;
+    projection = glm::perspective(glm::radians(45.0f), 800.0f / 600.0f, 0.1f, 10000.0f);
     pro->Unifrom4fv("P",&projection[0][0]);
 
-    glActiveTexture(GL_TEXTURE1);
-    glBindTexture(GL_TEXTURE_2D,tex->GetBufferID());
+    Model * mod = new Model("models/sponza/sponza.obj",pro);
+
     glEnable(GL_DEPTH_TEST);
     while (!glfwWindowShouldClose(_window))
     {
-        glm::mat4 view = camera->GetViewMatrix();
-        pro->Unifrom4fv("V",&view[0][0]);
+
+        glUseProgram(pro->GetBufferID());
         glClearColor(0.2, 0.2, 0.3, 1.0);
         glClearDepth(1.0);
         glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 
+
+        glm::mat4 view = camera->GetViewMatrix();
+        pro->Unifrom4fv("V",&view[0][0]);
         mod->Draw();
+
+
 
         float currentFrame = glfwGetTime();
         deltaTime = currentFrame - lastFrame;

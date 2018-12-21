@@ -7,6 +7,9 @@
 namespace scene
 {
 
+    /*
+     * ---------------------------------------------------Model---------------------------------------------
+     * */
     void Model::LoadModel(const char *path)
     {
         using namespace Assimp;
@@ -20,19 +23,59 @@ namespace scene
         for (unsigned int i = 0; i < scene->mNumMeshes; i++)
         {
             aiMesh * aiMesh = scene->mMeshes[i];
-            Mesh * mesh = new Mesh(aiMesh,scene);
+            Mesh * mesh = new Mesh(aiMesh,scene,this);
             this->_meshes.push_back(mesh);
         }
-    }
+        for(unsigned int i = 0; i< scene->mNumMaterials;++i)
+        {
+            const aiMaterial * material = scene->mMaterials[i];
+            Material mat = Material();
+            unsigned int diffseCount = material->GetTextureCount(aiTextureType_DIFFUSE);
+            unsigned int normalCount = material->GetTextureCount(aiTextureType_HEIGHT);
+            if(diffseCount > 0)
+            {
+                mat.Diffuse = LoadTexture(material,aiTextureType_DIFFUSE);
+            }
+            if(normalCount > 0)
+            {
+                mat.Normal = LoadTexture(material,aiTextureType_HEIGHT);
+            }
+            _materials.push_back(mat);
+        }
 
+    }
+    Texture2D * Model::LoadTexture(const aiMaterial * material,aiTextureType type)
+    {
+        aiString texturePath;
+        if(material->GetTexture(type,0,&texturePath) == AI_SUCCESS)
+        {
+            std::string fullPath;
+            std::string temp = "models/sponza/";
+            fullPath = temp + texturePath.data;
+
+
+            auto * image = new Image2D(fullPath.c_str());
+            image->Load();
+            Texture2D * tex = Texture2D::Create(GL_RGB,GL_LINEAR_MIPMAP_LINEAR);
+
+            helper::SetImageData(image,tex);
+            tex->EnableMipMap();
+            image->Release();
+            return tex;
+        }
+    }
     void Model::Draw()
     {
+        glUseProgram(_shader->GetBufferID());
         for(unsigned int i = 0; i < _meshes.size(); ++i)
         {
             _meshes[i]->Draw();
         }
+        glUseProgram(0);
     }
-
+    /*
+     * ---------------------------------------------------Mesh---------------------------------------------
+     * */
     void Mesh::ProcessMesh()
     {
         for (unsigned int i = 0; i < _mesh->mNumVertices; ++i)
@@ -65,7 +108,6 @@ namespace scene
                 _indices.push_back(s);
             }
         }
-
     }
 
     void Mesh::ApplyVertex()
@@ -73,8 +115,7 @@ namespace scene
         using namespace graph;
         ElementBuffer * ebo = ElementBuffer::Create();
         ebo->SetData(sizeof(unsigned int)*_indices.size(),&_indices[0],GL_STATIC_DRAW);
-        _vao = VertexArray::Create(GL_LINE, ebo);
-
+        _vao = VertexArray::Create(ebo);
         VertexBuffer * vertexdata = VertexBuffer::Create();
         vertexdata->SetData(sizeof(Vertex) * _vertices.size(), &_vertices[0], GL_STATIC_DRAW);
         vertexdata->AddAttribute(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *) 0);
@@ -86,8 +127,30 @@ namespace scene
 
     void Mesh::Draw()
     {
+        Material mat = _model->GetMaterial(_mesh->mMaterialIndex);
+        if(mat.Diffuse != nullptr)
+        {
+            glActiveTexture(GL_TEXTURE1);
+            glBindTexture(GL_TEXTURE_2D,mat.Diffuse->GetBufferID());
+        }
+        if(mat.Normal != nullptr)
+        {
+            glActiveTexture(GL_TEXTURE2);
+            glBindTexture(GL_TEXTURE_2D,mat.Normal->GetBufferID());
+        }
         glBindVertexArray(_vao->GetBufferID());
         glDrawElements(GL_TRIANGLES, _indices.size(), GL_UNSIGNED_INT, (GLvoid *)0);
-        glBindVertexArray(0);
+        if(mat.Diffuse != nullptr)
+        {
+            glActiveTexture(GL_TEXTURE1);
+            glBindTexture(GL_TEXTURE_2D,0);
+        }
+        if(mat.Normal != nullptr)
+        {
+            glActiveTexture(GL_TEXTURE2);
+            glBindTexture(GL_TEXTURE_2D,0);
+        }
     }
+
+
 }

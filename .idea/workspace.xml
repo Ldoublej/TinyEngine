@@ -16,14 +16,13 @@
   <component name="ChangeListManager">
     <list default="true" id="5abf389b-198e-4ab8-b527-2f3dd20510ac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/ElementBuffer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/graph/ElementBuffer.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/ElementBuffer.h" beforeDir="false" afterPath="$PROJECT_DIR$/graph/ElementBuffer.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/VertexBuffer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/graph/VertexBuffer.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/VertexBuffer.h" beforeDir="false" afterPath="$PROJECT_DIR$/graph/VertexBuffer.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/VertexBufferBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/graph/VertexBufferBase.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/Helper.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/graph/Helper.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/VertexArray.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/graph/VertexArray.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/VertexArray.h" beforeDir="false" afterPath="$PROJECT_DIR$/graph/VertexArray.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scene/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scene/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scene/Camera.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/scene/Camera.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scene/Model.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/scene/Model.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scene/Model.h" beforeDir="false" afterPath="$PROJECT_DIR$/scene/Model.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,10 +51,37 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="134" column="13" selection-start-line="134" selection-start-column="8" selection-end-line="134" selection-end-column="13" />
+            <state relative-caret-position="124">
+              <caret line="108" column="30" selection-start-line="108" selection-start-column="30" selection-end-line="108" selection-end-column="30" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scene/Model.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="277">
+              <caret line="99" column="79" selection-start-line="99" selection-start-column="79" selection-end-line="99" selection-end-column="79" />
+              <folding>
+                <element signature="e#98#120#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scene/Model.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="362">
+              <caret line="146" column="9" lean-forward="true" selection-start-line="146" selection-start-column="9" selection-end-line="146" selection-end-column="9" />
+              <folding>
+                <element signature="e#2742#2795#0" />
+                <element signature="e#2066#2276#0" />
+                <element signature="e#2281#3541#0" />
+                <element signature="e#3547#4339#0" />
               </folding>
             </state>
           </provider>
@@ -69,6 +95,11 @@
         <option value="CMakeLists.txt" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>texturePath.data</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -95,14 +126,11 @@
         <option value="$PROJECT_DIR$/graph/Shader.cpp" />
         <option value="$PROJECT_DIR$/TestTexture2DArray.cpp" />
         <option value="$PROJECT_DIR$/graph/Texture2D.h" />
-        <option value="$PROJECT_DIR$/graph/VertexArray.h" />
         <option value="$PROJECT_DIR$/graph/Texture.h" />
         <option value="$PROJECT_DIR$/graph/Shader.h" />
         <option value="$PROJECT_DIR$/TestCEGUI.h" />
         <option value="$PROJECT_DIR$/graph/CubeMap.h" />
         <option value="$PROJECT_DIR$/graph/Texture2DArray.cpp" />
-        <option value="$PROJECT_DIR$/graph/VertexArray.cpp" />
-        <option value="$PROJECT_DIR$/graph/Helper.cpp" />
         <option value="$PROJECT_DIR$/graph/Helper.h" />
         <option value="$PROJECT_DIR$/resource/Texture2DResource.h" />
         <option value="$PROJECT_DIR$/resource/Texture2DArrayResource.h" />
@@ -112,19 +140,23 @@
         <option value="$PROJECT_DIR$/graph/Program.h" />
         <option value="$PROJECT_DIR$/resource/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/graph/Program.cpp" />
         <option value="$PROJECT_DIR$/Application.h" />
         <option value="$PROJECT_DIR$/TestTexture2DArray.h" />
         <option value="$PROJECT_DIR$/scene/Camera.h" />
-        <option value="$PROJECT_DIR$/scene/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/scene/Model.h" />
         <option value="$PROJECT_DIR$/scene/Camera.cpp" />
         <option value="$PROJECT_DIR$/graph/ElementBuffer.cpp" />
         <option value="$PROJECT_DIR$/graph/ElementBuffer.h" />
-        <option value="$PROJECT_DIR$/scene/Model.cpp" />
         <option value="$PROJECT_DIR$/graph/VertexBufferBase.h" />
         <option value="$PROJECT_DIR$/graph/VertexBuffer.cpp" />
         <option value="$PROJECT_DIR$/graph/VertexBuffer.h" />
+        <option value="$PROJECT_DIR$/scene/Material.h" />
+        <option value="$PROJECT_DIR$/graph/VertexArray.cpp" />
+        <option value="$PROJECT_DIR$/graph/VertexArray.h" />
+        <option value="$PROJECT_DIR$/scene/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/graph/Helper.cpp" />
+        <option value="$PROJECT_DIR$/graph/Program.cpp" />
+        <option value="$PROJECT_DIR$/scene/Model.h" />
+        <option value="$PROJECT_DIR$/scene/Model.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
       </list>
     </option>
@@ -337,12 +369,20 @@
       <workItem from="1545221437290" duration="1416000" />
       <workItem from="1545229023615" duration="4176000" />
       <workItem from="1545283832821" duration="7664000" />
-      <workItem from="1545293312266" duration="712000" />
+      <workItem from="1545293312266" duration="755000" />
+      <workItem from="1545298125226" duration="3827000" />
+      <workItem from="1545314705925" duration="865000" />
+      <workItem from="1545317217882" duration="246000" />
+      <workItem from="1545317857806" duration="995000" />
+      <workItem from="1545365747115" duration="2792000" />
+      <workItem from="1545368553459" duration="317000" />
+      <workItem from="1545368882929" duration="2321000" />
+      <workItem from="1545382506299" duration="3236000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122249000" />
+    <option name="totallyTimeSpent" value="136891000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -357,7 +397,7 @@
     <frame x="0" y="0" width="1600" height="850" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29139924" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32220796" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -383,13 +423,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/graph/Texture2DArray.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/graph/Texture.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -443,52 +476,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graph/VertexArray.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357">
-          <caret line="15" column="63" selection-start-line="15" selection-start-column="63" selection-end-line="15" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph/VertexArray.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph/Texture.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph/Texture2D.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/Image2D.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resource/Image2D.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph/Texture2D.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="26" column="85" selection-start-line="26" selection-start-column="79" selection-end-line="26" selection-end-column="85" />
         </state>
       </provider>
     </entry>
@@ -513,23 +504,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graph/Helper.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-          <folding>
-            <element signature="e#98#125#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph/Program.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/graph/FrameBuffer.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -550,35 +524,14 @@
     <entry file="file://$PROJECT_DIR$/resource/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/graph/Program.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="108" column="47" selection-start-line="108" selection-start-column="47" selection-end-line="108" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application.h" />
     <entry file="file://$PROJECT_DIR$/TestTexture2DArray.h" />
     <entry file="file://$PROJECT_DIR$/scene/Mesh.cpp" />
     <entry file="file://$PROJECT_DIR$/scene/Mesh.h" />
-    <entry file="file://$PROJECT_DIR$/scene/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph/Helper.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -617,13 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graph/VertexBuffer.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scene/Camera.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
@@ -631,23 +577,6 @@
           <folding>
             <element signature="e#72#94#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scene/Model.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
-          <folding>
-            <element signature="e#98#120#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scene/Model.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-391">
-          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -668,10 +597,121 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/graph/Program.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scene/Material.h" />
+    <entry file="file://$PROJECT_DIR$/graph/VertexBuffer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/VertexArray.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="58" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/VertexArray.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scene/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/Helper.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding>
+            <element signature="e#98#125#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource/Image2D.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/Helper.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="74" selection-start-line="14" selection-start-column="74" selection-end-line="14" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/Texture2D.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/Texture.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/Texture2D.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/Program.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="108" column="47" selection-start-line="108" selection-start-column="47" selection-end-line="108" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scene/Model.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="146" column="9" lean-forward="true" selection-start-line="146" selection-start-column="9" selection-end-line="146" selection-end-column="9" />
+          <folding>
+            <element signature="e#2742#2795#0" />
+            <element signature="e#2066#2276#0" />
+            <element signature="e#2281#3541#0" />
+            <element signature="e#3547#4339#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scene/Model.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="99" column="79" selection-start-line="99" selection-start-column="79" selection-end-line="99" selection-end-column="79" />
+          <folding>
+            <element signature="e#98#120#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="134" column="13" selection-start-line="134" selection-start-column="8" selection-end-line="134" selection-end-column="13" />
+        <state relative-caret-position="124">
+          <caret line="108" column="30" selection-start-line="108" selection-start-column="30" selection-end-line="108" selection-end-column="30" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>

@@ -2,7 +2,7 @@
 
 namespace graph {
 
-	VertexArray::VertexArray(GLenum primitiveType, ElementBuffer * ebo):_primitive_type(primitiveType),_ebo(nullptr)
+	VertexArray::VertexArray(ElementBuffer * ebo):_ebo(ebo)
 	{
 		glGenVertexArrays(1, &_buffer_id);
 		if (!ebo)
@@ -10,10 +10,10 @@ namespace graph {
 		_ebo = ebo;
 	}
 
-	VertexArray * VertexArray::Create(GLenum primitiveType, ElementBuffer * ebo)
+	VertexArray * VertexArray::Create(ElementBuffer * ebo)
 	{
 
-		VertexArray * vao = new VertexArray(primitiveType,ebo);
+		VertexArray * vao = new VertexArray(ebo);
 		if (vao->GetBufferID() == 0)
 			return nullptr;
 		return vao;

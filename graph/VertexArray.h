@@ -12,31 +12,31 @@ namespace graph{
 	private:
 		GLuint _buffer_id;
 		std::vector<VertexBuffer *> _vbo_list;
-		GLenum _primitive_type;
 		ElementBuffer * _ebo;
 
 	private:
-		VertexArray(GLenum primitiveType, ElementBuffer * ebo);
+
+		explicit VertexArray(ElementBuffer * ebo);
 
 	public:
-		static VertexArray * Create(GLenum primitiveType, ElementBuffer * ebo);
+		static VertexArray * Create(ElementBuffer * ebo);
 
 		GLuint GetBufferID()
 		{
 			return _buffer_id;
 		}
-		GLenum GetPrimitiveType()
-		{
-			return _primitive_type;
-		}
+
 
 		void AddVertexBuffer(VertexBuffer * vbo);
+
+		void SetElementBuffer(ElementBuffer * ebo);
 		ElementBuffer * GetElementBuffer() { return _ebo; }
+
 		VertexBuffer * GetVertexBuffer(int index);
 		int GetVertexBufferCount() { return _vbo_list.size(); }
 
 		void ApplyVertexAttributes();
-		void SetElementBuffer(ElementBuffer * ebo);
+
 
 	};
 

@@ -12,7 +12,7 @@ namespace graph
         {
             if(!res->IsLoad())
                 return;
-            texture2d->TexImage(0,res->GetWidth(),res->GetHeight(),GL_RGB,GL_UNSIGNED_BYTE,res->GetData());
+            texture2d->TexImage(0,res->GetWidth(),res->GetHeight(),GL_RGBA,GL_UNSIGNED_BYTE,res->GetData());
 
         }
         void SetImageData(Image2DArray * res,Texture2DArray * texture2d_array)
@@ -23,7 +23,7 @@ namespace graph
 
             for(int i = 0;i < res->GetTexture2DCount();++i)
             {
-                texture2d_array->TexSubImage(0,0,0,i,res->GetWidth(0),res->GetHeight(0),1,GL_RGB,GL_UNSIGNED_BYTE,res->GetData(i));
+                texture2d_array->TexSubImage(0,0,0,i,res->GetWidth(0),res->GetHeight(0),1,GL_RGBA,GL_UNSIGNED_BYTE,res->GetData(i));
             }
         }
     }
