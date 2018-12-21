@@ -48,12 +48,18 @@ namespace scene
         const aiScene * _scene;
         aiMesh * _mesh;
         Model * _model;
+        Material  _material;
         graph::VertexArray * _vao;
         std::vector<Vertex> _vertices;
         std::vector<unsigned int> _indices;
 
     private:
-        Mesh(aiMesh * mesh ,const aiScene * scene,Model * model):_mesh(mesh),_scene(scene),_vao(nullptr),_model(model){ProcessMesh();ApplyVertex();}
+        Mesh(aiMesh * mesh ,const aiScene * scene,Model * model):_mesh(mesh),_scene(scene),_vao(nullptr),_model(model),
+        _material()
+        {
+            ProcessMesh();
+            ApplyVertex();
+        }
         void ProcessMesh();
         void ApplyVertex();
         void Draw();

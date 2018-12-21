@@ -10,7 +10,7 @@
 #include "scene/Camera.h"
 #include "scene/Model.h"
 
-scene::Camera * camera;
+scene::Camera * camera = new scene::Camera();
 float lastX = 400, lastY = 300;
 float deltaTime = 0.0f; // 当前帧与上一帧的时间差
 float lastFrame = 0.0f; // 上一帧的时间
@@ -47,19 +47,19 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
             glfwSetWindowShouldClose(window, GL_TRUE);
             break;
         case GLFW_KEY_W:
-            loc += camera->GetTarget() * 2000.0f *deltaTime;
+            loc += camera->GetTarget() * 23.0f *deltaTime;
             camera->SetWorld(loc);
             break;
         case GLFW_KEY_S:
-            loc -= camera->GetTarget() * 2000.0f *deltaTime;
+            loc -= camera->GetTarget() * 23.0f *deltaTime;
             camera->SetWorld(loc);
             break;
         case GLFW_KEY_A:
-            loc -= right * 2000.0f *deltaTime;
+            loc -= right * 23.0f *deltaTime;
             camera->SetWorld(loc);
             break;
         case GLFW_KEY_D:
-            loc += right * 2000.0f *deltaTime;
+            loc += right * 23.0f *deltaTime;
             camera->SetWorld(loc);
             break;
     }
@@ -96,27 +96,28 @@ int main()
     using namespace resource;
     using namespace scene;
 
-    camera = new Camera();
-
-
     //Shader
     Shader * vs = Shader::Creat(GL_VERTEX_SHADER, "shaders/basic.vert");
     Shader * fs = Shader::Creat(GL_FRAGMENT_SHADER, "shaders/basic.frag");
     Program * pro = Program::Creat(vs, fs);
     pro->Compile();
+    Model * mod = new Model("models/sponza/sponza.obj",pro);
+
     glUseProgram(pro->GetBufferID());
     pro->Unifrom1i("_DiffuseMap",1);
     pro->Unifrom1i("_NormalMap",2);
     glm::mat4 projection;
-    projection = glm::perspective(glm::radians(45.0f), 800.0f / 600.0f, 0.1f, 10000.0f);
-    pro->Unifrom4fv("P",&projection[0][0]);
+    glm::mat4 scale;
+    projection = glm::perspective(glm::radians(45.0f), 800.0f / 600.0f, 0.1f, 100.0f);
 
-    Model * mod = new Model("models/sponza/sponza.obj",pro);
+    pro->Unifrom4fv("P",&projection[0][0]);
+    scale = glm::scale(glm::mat4(1.0),glm::vec3(0.01));
+    pro->Unifrom4fv("M",&scale[0][0]);
+
 
     glEnable(GL_DEPTH_TEST);
     while (!glfwWindowShouldClose(_window))
     {
-
         glUseProgram(pro->GetBufferID());
         glClearColor(0.2, 0.2, 0.3, 1.0);
         glClearDepth(1.0);

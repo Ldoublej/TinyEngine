@@ -99,14 +99,36 @@ namespace graph
 
     void Program::Unifrom1i(const char *uniform, GLint v0)
     {
+		GLint currentProgram = 0;
+		glGetIntegerv(GL_CURRENT_PROGRAM,&currentProgram);
+
+		if(!currentProgram == _buffer_id)
+		{
+			glUseProgram(_buffer_id);
+		}
 		GLint id = glGetUniformLocation(this->_buffer_id,uniform);
 		glUniform1i(id,v0);
+		if(!currentProgram == _buffer_id)
+		{
+			glUseProgram(currentProgram);
+		}
     }
 
 	void Program::Unifrom4fv(const char *uniform, const GLfloat * mat4)
 	{
+		GLint currentProgram = 0;
+		glGetIntegerv(GL_CURRENT_PROGRAM,&currentProgram);
+
+		if(currentProgram != _buffer_id)
+		{
+			glUseProgram(_buffer_id);
+		}
 		GLint id = glGetUniformLocation(this->_buffer_id,uniform);
 		glUniformMatrix4fv(id,1,GL_FALSE,mat4);
+		if(currentProgram != _buffer_id)
+		{
+			glUseProgram(currentProgram);
+		}
 	}
 
 

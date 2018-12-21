@@ -20,12 +20,6 @@ namespace scene
             printf("ERROR::ASSIMP::");
             return;
         }
-        for (unsigned int i = 0; i < scene->mNumMeshes; i++)
-        {
-            aiMesh * aiMesh = scene->mMeshes[i];
-            Mesh * mesh = new Mesh(aiMesh,scene,this);
-            this->_meshes.push_back(mesh);
-        }
         for(unsigned int i = 0; i< scene->mNumMaterials;++i)
         {
             const aiMaterial * material = scene->mMaterials[i];
@@ -42,6 +36,12 @@ namespace scene
             }
             _materials.push_back(mat);
         }
+        for (unsigned int i = 0; i < scene->mNumMeshes; i++)
+        {
+            aiMesh * aiMesh = scene->mMeshes[i];
+            Mesh * mesh = new Mesh(aiMesh,scene,this);
+            this->_meshes.push_back(mesh);
+        }
 
     }
     Texture2D * Model::LoadTexture(const aiMaterial * material,aiTextureType type)
@@ -56,7 +56,7 @@ namespace scene
 
             auto * image = new Image2D(fullPath.c_str());
             image->Load();
-            Texture2D * tex = Texture2D::Create(GL_RGB,GL_LINEAR_MIPMAP_LINEAR);
+            Texture2D * tex = Texture2D::Create(GL_RGBA,GL_LINEAR_MIPMAP_LINEAR);
 
             helper::SetImageData(image,tex);
             tex->EnableMipMap();
@@ -108,6 +108,7 @@ namespace scene
                 _indices.push_back(s);
             }
         }
+        _material = _model->GetMaterial(_mesh->mMaterialIndex);
     }
 
     void Mesh::ApplyVertex()
@@ -127,29 +128,29 @@ namespace scene
 
     void Mesh::Draw()
     {
-        Material mat = _model->GetMaterial(_mesh->mMaterialIndex);
-        if(mat.Diffuse != nullptr)
-        {
-            glActiveTexture(GL_TEXTURE1);
-            glBindTexture(GL_TEXTURE_2D,mat.Diffuse->GetBufferID());
-        }
-        if(mat.Normal != nullptr)
-        {
-            glActiveTexture(GL_TEXTURE2);
-            glBindTexture(GL_TEXTURE_2D,mat.Normal->GetBufferID());
-        }
         glBindVertexArray(_vao->GetBufferID());
+        if(_material.Diffuse != nullptr)
+        {
+            glActiveTexture(GL_TEXTURE1);
+            glBindTexture(GL_TEXTURE_2D,_material.Diffuse->GetBufferID());
+        }
+        if(_material.Normal != nullptr)
+        {
+            glActiveTexture(GL_TEXTURE2);
+            glBindTexture(GL_TEXTURE_2D,_material.Normal->GetBufferID());
+        }
         glDrawElements(GL_TRIANGLES, _indices.size(), GL_UNSIGNED_INT, (GLvoid *)0);
-        if(mat.Diffuse != nullptr)
+        if(_material.Diffuse != nullptr)
         {
             glActiveTexture(GL_TEXTURE1);
             glBindTexture(GL_TEXTURE_2D,0);
         }
-        if(mat.Normal != nullptr)
+        if(_material.Normal != nullptr)
         {
             glActiveTexture(GL_TEXTURE2);
             glBindTexture(GL_TEXTURE_2D,0);
         }
+
     }
 
 
