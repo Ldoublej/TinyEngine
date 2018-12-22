@@ -8,6 +8,7 @@ namespace graph
 {
     namespace helper
     {
+
         void SetImageData(Image2D * res,Texture2D * texture2d)
         {
             if(!res->IsLoad())

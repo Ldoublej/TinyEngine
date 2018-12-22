@@ -13,7 +13,7 @@ namespace graph {
 
 	public:
 		static ElementBuffer * Create();
-		~ElementBuffer() = default;
+		~ElementBuffer() override = default ;
 	};
 }
 

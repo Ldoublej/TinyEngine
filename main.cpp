@@ -33,36 +33,28 @@ void mouse_button_callback(GLFWwindow* window, double xpos,double ypos)
 
     camera->UpdateVector();
 }
-void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
+void processInput(GLFWwindow *window)
 {
-    if (action != GLFW_REPEAT)
-        return;
     glm::vec3 loc = camera->GetWorld();
     glm::vec3 up = camera->GetUp();
     glm::vec3 right = glm::cross(camera->GetTarget(),up);
     right = glm::normalize(right);
-    switch (key)
+
+    float cameraSpeed = 0.1f; // adjust accordingly
+    if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
+        loc += cameraSpeed * camera->GetTarget() ;
+    if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
+        loc -= cameraSpeed * camera->GetTarget() ;
+    if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
+        loc -= right * cameraSpeed;
+    if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
+        loc += right * cameraSpeed;
+    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
     {
-        case GLFW_KEY_ESCAPE:
-            glfwSetWindowShouldClose(window, GL_TRUE);
-            break;
-        case GLFW_KEY_W:
-            loc += camera->GetTarget() * 23.0f *deltaTime;
-            camera->SetWorld(loc);
-            break;
-        case GLFW_KEY_S:
-            loc -= camera->GetTarget() * 23.0f *deltaTime;
-            camera->SetWorld(loc);
-            break;
-        case GLFW_KEY_A:
-            loc -= right * 23.0f *deltaTime;
-            camera->SetWorld(loc);
-            break;
-        case GLFW_KEY_D:
-            loc += right * 23.0f *deltaTime;
-            camera->SetWorld(loc);
-            break;
+        glfwTerminate();
+        exit(0);
     }
+    camera->SetWorld(loc);
 }
 int main()
 {
@@ -73,7 +65,6 @@ int main()
     /* Create a windowed mode window and its OpenGL context */
     GLFWwindow * _window = glfwCreateWindow(800, 600, "Test", nullptr, nullptr);
     glfwSetWindowPos(_window,300,150);
-    glfwSetKeyCallback(_window, key_callback);
     glfwSetCursorPosCallback(_window, mouse_button_callback);
     glfwSetInputMode(_window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
     if (!_window)
@@ -118,6 +109,7 @@ int main()
     glEnable(GL_DEPTH_TEST);
     while (!glfwWindowShouldClose(_window))
     {
+        processInput(_window);
         glUseProgram(pro->GetBufferID());
         glClearColor(0.2, 0.2, 0.3, 1.0);
         glClearDepth(1.0);

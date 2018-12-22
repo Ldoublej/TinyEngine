@@ -32,7 +32,7 @@ namespace graph
 		return shader;
 	}
 
-	void Shader::Source(const std::string source)
+	void Shader::Source(const std::string & source)
 	{
 		const char * p[1];
 		p[0] = source.c_str();

@@ -11,7 +11,7 @@ namespace graph{
 
 	FrameBuffer * FrameBuffer::Create(GLenum target)
 	{
-		FrameBuffer * fbo = new FrameBuffer(target);
+		auto * fbo = new FrameBuffer(target);
 		if (fbo->GetBufferID() == 0)
 			return nullptr;
 		return fbo;
@@ -33,7 +33,7 @@ namespace graph{
 	}
 	void FrameBuffer::AddAttachment(GLsizei width, GLsizei height, GLenum internalFormat, GLenum attachment)
 	{
-		RenderBufferInfo info;
+		RenderBufferInfo info = RenderBufferInfo();
 		info.width = width;
 		info.height = height;
 		info.internalFormat = internalFormat;
@@ -88,8 +88,8 @@ namespace graph{
 
 	FrameBuffer::~FrameBuffer()
 	{
-		int renderBufferCount = _renderbuffers_id.size();
-		for (int i = 0; i < renderBufferCount; ++i)
+		unsigned long renderBufferCount = _renderbuffers_id.size();
+		for (unsigned long i = 0; i < renderBufferCount; ++i)
 		{
 			GLuint renderBuffer = _renderbuffers_id.at(i);
 			glDeleteRenderbuffers(1, &renderBuffer);

@@ -23,7 +23,7 @@ namespace graph {
 		GLenum _framebuffer_type;
 		std::vector<GLuint> _renderbuffers_id;
 	private:
-		FrameBuffer(GLenum target);
+		explicit FrameBuffer(GLenum target);
 
 	public:
 		static FrameBuffer * Create(GLenum target);

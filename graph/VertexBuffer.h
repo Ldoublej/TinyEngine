@@ -41,7 +41,7 @@ namespace graph {
 		VBOAttribute GetAttributeAt(int index) { return _attribute_list.at(index); };
 		int GetAttributeCount() { return _attribute_list.size(); };
 
-		~VertexBuffer() = default;
+		~VertexBuffer() override = default;
 	};
 
 }

@@ -24,7 +24,7 @@ namespace graph
 
 
 
-		void Source(const std::string source);
+		void Source(const std::string & source);
 		bool Compile();
 		bool IsCompile(){return _is_compile;}
 		bool IsAvailable(){return _is_success;}

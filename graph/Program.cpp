@@ -11,7 +11,7 @@ namespace graph
 	}
 	Program * Program::Creat(Shader * vs, Shader * fs)
 	{
-		Program * pro = new Program();
+		auto * pro = new Program();
 		if (pro->GetBufferID() == 0)
 			return nullptr;
 
@@ -25,7 +25,7 @@ namespace graph
 	}
 	Program * Program::Creat()
 	{
-		Program * pro = new Program();
+		auto * pro = new Program();
 		if (pro->GetBufferID() == 0)
 			return nullptr;
 		return pro;
@@ -34,7 +34,7 @@ namespace graph
 	{
 	    //编译shader并附加shader
 
-	    if(_shaders.size() == 0)
+	    if(_shaders.empty())
 	        return false;
 		bool status = true;
 		for (unsigned int i = 0; i < _shaders.size(); ++i)
@@ -51,6 +51,7 @@ namespace graph
                 is_success = shader->IsAvailable();
                 status = status && is_success;
             }
+
             if(status)
             {
                 glAttachShader(_buffer_id, shader->GetBufferID());
@@ -68,7 +69,7 @@ namespace graph
 		if (!is_success)
 		{
 			GLchar ch[1024];
-			glGetProgramInfoLog(_buffer_id, 1024, NULL, ch);
+			glGetProgramInfoLog(_buffer_id, 1024, nullptr, ch);
 			printf("%s", ch);
 			return false;
 		}
@@ -102,13 +103,13 @@ namespace graph
 		GLint currentProgram = 0;
 		glGetIntegerv(GL_CURRENT_PROGRAM,&currentProgram);
 
-		if(!currentProgram == _buffer_id)
+		if(currentProgram != _buffer_id)
 		{
 			glUseProgram(_buffer_id);
 		}
 		GLint id = glGetUniformLocation(this->_buffer_id,uniform);
 		glUniform1i(id,v0);
-		if(!currentProgram == _buffer_id)
+		if(currentProgram != _buffer_id)
 		{
 			glUseProgram(currentProgram);
 		}

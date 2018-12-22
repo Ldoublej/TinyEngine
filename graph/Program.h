@@ -16,8 +16,7 @@ namespace graph
 		GLuint _buffer_id;
 		std::vector<Shader *> _shaders;
 		bool _is_compile;
-	private:
-		Program();
+
 
 	public:
 		static Program * Creat(Shader * vs, Shader * fs);
@@ -32,13 +31,12 @@ namespace graph
 		void Unifrom4fv(const char * uniform,const GLfloat * mat4);
 		GLuint GetBufferID(){return _buffer_id;}
 
-
 		~Program()
 		{
 			glDeleteProgram(_buffer_id);
 		}
-
-	
+	private:
+		Program();
 	};
 
 }

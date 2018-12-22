@@ -13,7 +13,7 @@ namespace graph
     class Texture2DArray:public Texture
     {
     private:
-        Texture2DArray(GLenum internalFormat) :Texture(GL_TEXTURE_2D_ARRAY, internalFormat) { _internalFormat = internalFormat; };
+        explicit Texture2DArray(GLenum internalFormat) :Texture(GL_TEXTURE_2D_ARRAY, internalFormat) { _internalFormat = internalFormat; };
 
     public:
         static Texture2DArray * Create(GLenum internalFormat, GLenum filter = GL_LINEAR, GLenum wrap = GL_REPEAT);
@@ -26,7 +26,7 @@ namespace graph
 
         void EnableMipMap();
 
-        ~Texture2DArray() = default;
+        ~Texture2DArray() override = default;
     };
 
 }

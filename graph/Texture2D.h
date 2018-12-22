@@ -22,7 +22,7 @@ namespace graph
 
 		void EnableMipMap();
 
-		~Texture2D() = default;
+		~Texture2D() override = default;
 	};
 }
 
