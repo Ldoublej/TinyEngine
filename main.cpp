@@ -4,11 +4,11 @@
 #include "../graph/VertexArray.h"
 #include "../graph/Texture2D.h"
 #include "resource/Image2D.h"
-#include "resource/Image2DArray.h"
 #include "../graph/Texture2DArray.h"
 #include "../graph/Helper.h"
 #include "scene/Camera.h"
 #include "scene/Model.h"
+#include "scene/SkyBox.h"
 
 scene::Camera * camera = new scene::Camera();
 float lastX = 400, lastY = 300;
@@ -41,6 +41,8 @@ void processInput(GLFWwindow *window)
     right = glm::normalize(right);
 
     float cameraSpeed = 0.1f; // adjust accordingly
+    if (glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS)
+        cameraSpeed = 0.05;
     if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
         loc += cameraSpeed * camera->GetTarget() ;
     if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
@@ -54,6 +56,7 @@ void processInput(GLFWwindow *window)
         glfwTerminate();
         exit(0);
     }
+
     camera->SetWorld(loc);
 }
 int main()
@@ -88,39 +91,56 @@ int main()
     using namespace scene;
 
     //Shader
-    Shader * vs = Shader::Creat(GL_VERTEX_SHADER, "shaders/basic.vert");
-    Shader * fs = Shader::Creat(GL_FRAGMENT_SHADER, "shaders/basic.frag");
-    Program * pro = Program::Creat(vs, fs);
-    pro->Compile();
-    Model * mod = new Model("models/sponza/sponza.obj",pro);
+    Shader * skyboxVs = Shader::Creat(GL_VERTEX_SHADER, "shaders/skybox.vert");
+    Shader * skyboxFs = Shader::Creat(GL_FRAGMENT_SHADER, "shaders/skybox.frag");
+    Program * skyboxShader = Program::Creat(skyboxVs, skyboxFs);
+    skyboxShader->Compile();
+    Shader * baseVs = Shader::Creat(GL_VERTEX_SHADER, "shaders/basic.vert");
+    Shader * baseFs = Shader::Creat(GL_FRAGMENT_SHADER, "shaders/basic.frag");
+    Program * baseShader = Program::Creat(baseVs, baseFs);
+    skyboxShader->Compile();
+    baseShader->Compile();
 
-    glUseProgram(pro->GetBufferID());
-    pro->Unifrom1i("_DiffuseMap",1);
-    pro->Unifrom1i("_NormalMap",2);
+
+    Image2D * iamges[] = {
+            new Image2D("textures/skybox/Right.jpg",GL_RGB,GL_UNSIGNED_BYTE),
+            new Image2D("textures/skybox/Left.jpg",GL_RGB,GL_UNSIGNED_BYTE),
+            new Image2D("textures/skybox/Top.jpg",GL_RGB,GL_UNSIGNED_BYTE),
+            new Image2D("textures/skybox/Bottom.jpg",GL_RGB,GL_UNSIGNED_BYTE),
+            new Image2D("textures/skybox/Back.jpg",GL_RGB,GL_UNSIGNED_BYTE),
+            new Image2D("textures/skybox/Front.jpg",GL_RGB,GL_UNSIGNED_BYTE),
+    };
+
+    auto * skybox = new SkyBox(iamges,skyboxShader);
+    auto * mod = new Model("models/sponza/sponza.obj",baseShader);
+
     glm::mat4 projection;
     glm::mat4 scale;
     projection = glm::perspective(glm::radians(45.0f), 800.0f / 600.0f, 0.1f, 100.0f);
 
-    pro->Unifrom4fv("P",&projection[0][0]);
+    baseShader->Unifrom4fv("P",&projection[0][0]);
+    baseShader->Unifrom1i("_DiffuseMap",1);
+    skyboxShader->Unifrom4fv("P",&projection[0][0]);
     scale = glm::scale(glm::mat4(1.0),glm::vec3(0.01));
-    pro->Unifrom4fv("M",&scale[0][0]);
+    baseShader->Unifrom4fv("M",&scale[0][0]);
 
 
     glEnable(GL_DEPTH_TEST);
     while (!glfwWindowShouldClose(_window))
     {
         processInput(_window);
-        glUseProgram(pro->GetBufferID());
         glClearColor(0.2, 0.2, 0.3, 1.0);
         glClearDepth(1.0);
         glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 
 
-        glm::mat4 view = camera->GetViewMatrix();
-        pro->Unifrom4fv("V",&view[0][0]);
+        glm::mat4 skyboxView = camera->GetViewMatrixWithoutLocation();
+        skyboxShader->Unifrom4fv("V",&skyboxView[0][0]);
+        glm::mat4 baseView = camera->GetViewMatrix();
+        baseShader->Unifrom4fv("V",&baseView[0][0]);
+
+        skybox->Draw();
         mod->Draw();
-
-
 
         float currentFrame = glfwGetTime();
         deltaTime = currentFrame - lastFrame;

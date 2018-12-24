@@ -15,29 +15,19 @@ namespace graph{
 		ElementBuffer * _ebo;
 
 	private:
-
 		explicit VertexArray(ElementBuffer * ebo);
 
 	public:
 		static VertexArray * Create(ElementBuffer * ebo);
-
-		GLuint GetBufferID()
-		{
-			return _buffer_id;
-		}
-
-
 		void AddVertexBuffer(VertexBuffer * vbo);
 
+
 		void SetElementBuffer(ElementBuffer * ebo);
-		ElementBuffer * GetElementBuffer() { return _ebo; }
-
+		ElementBuffer * GetElementBuffer() const;
 		VertexBuffer * GetVertexBuffer(int index);
-		int GetVertexBufferCount() { return _vbo_list.size(); }
-
+        std::vector<graph::VertexBuffer *>::size_type GetVertexBufferCount() const;
+		GLuint GetBufferID() const;
 		void ApplyVertexAttributes();
-
-
 	};
 
 }

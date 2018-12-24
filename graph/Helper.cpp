@@ -13,18 +13,15 @@ namespace graph
         {
             if(!res->IsLoad())
                 return;
-            texture2d->TexImage(0,res->GetWidth(),res->GetHeight(),GL_RGBA,GL_UNSIGNED_BYTE,res->GetData());
-
+            texture2d->TexImage(0,res->GetWidth(),res->GetHeight(),res->GetFormat(),res->GetType(),res->GetData());
         }
-        void SetImageData(Image2DArray * res,Texture2DArray * texture2d_array)
+        void SetImageData(Image2D ** images ,CubeMap * cubeMap)
         {
-            if(!res->IsLoad())
-                return;
-            texture2d_array->TexImage(0,res->GetWidth(0),res->GetWidth(0),res->GetTexture2DCount(),GL_RGB,GL_UNSIGNED_BYTE, nullptr);
-
-            for(int i = 0;i < res->GetTexture2DCount();++i)
+            for(unsigned int i = 0; i < 6; i++)
             {
-                texture2d_array->TexSubImage(0,0,0,i,res->GetWidth(0),res->GetHeight(0),1,GL_RGBA,GL_UNSIGNED_BYTE,res->GetData(i));
+                Image2D * image = images[i];
+                image->Load();
+                cubeMap->TexImage(GL_TEXTURE_CUBE_MAP_POSITIVE_X + i,0,image->GetWidth(),image->GetHeight(),image->GetFormat(),image->GetType(),image->GetData());
             }
         }
     }

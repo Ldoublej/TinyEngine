@@ -88,14 +88,22 @@ namespace graph{
 
 	FrameBuffer::~FrameBuffer()
 	{
-		unsigned long renderBufferCount = _renderbuffers_id.size();
-		for (unsigned long i = 0; i < renderBufferCount; ++i)
-		{
-			GLuint renderBuffer = _renderbuffers_id.at(i);
-			glDeleteRenderbuffers(1, &renderBuffer);
-		}
-
+		std::vector<GLuint>::size_type renderBufferCount = _renderbuffers_id.size();
+		for(auto i : _renderbuffers_id)
+        {
+            glDeleteRenderbuffers(1, &i);
+        }
 		glDeleteFramebuffers(1, &_buffer_id);
+	}
+
+	GLenum FrameBuffer::GetBufferType() const
+	{
+		return _framebuffer_type;
+	}
+
+	GLuint FrameBuffer::GetBufferID() const
+	{
+		return _buffer_id;
 	}
 
 }

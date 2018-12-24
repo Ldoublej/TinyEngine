@@ -8,5 +8,5 @@ add_subdirectory(graph)
 add_subdirectory(resource)
 add_subdirectory(scene)
 
-add_executable(ogl main.cpp resource/Image2DArray.h)
+add_executable(ogl main.cpp)
 target_link_libraries(ogl dl Xxf86vm glfw3 GLEW  GL  X11  pthread  Xrandr Xinerama Xcursor Xi graph resource scene)

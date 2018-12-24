@@ -8,7 +8,8 @@ namespace graph
 	class Texture2D :public Texture
 	{
 	private:
-		Texture2D(GLenum internalFormat) :Texture(GL_TEXTURE_2D, internalFormat) { _internalFormat = internalFormat; };
+		explicit Texture2D(GLenum internalFormat) :Texture(GL_TEXTURE_2D, internalFormat){};
+
 
 	public:
 		static Texture2D * Create(GLenum internalFormat, GLenum filter = GL_LINEAR, GLenum wrap = GL_REPEAT);

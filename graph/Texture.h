@@ -10,26 +10,16 @@ namespace graph {
 	protected:
 		GLuint _buffer_id;
 		GLenum _buffer_type;
-		GLenum _internalFormat;
+		GLenum _internal_format;
 
 	protected:
 		Texture(GLenum target, GLenum interalFormat);
 
 
 	public:
-		GLuint GetBufferID()
-		{
-			return _buffer_id;
-		}
-		GLenum GetBufferType()
-		{
-			return _buffer_type;
-		}
-		GLenum GetInternalFormat()
-		{
-			return _internalFormat;
-		}
-
+		GLuint GetBufferID() const;
+		GLenum GetBufferType() const;
+		GLenum GetInternalFormat() const;
 
 		virtual ~Texture();
 	};

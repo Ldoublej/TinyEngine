@@ -35,7 +35,7 @@ namespace graph {
 		void * MapBufferData(GLenum access);
 		GLboolean UnmapBufferData();
 
-		virtual ~VertexBufferBase() { glDeleteBuffers(1, &_buffer_id); };
+		virtual ~VertexBufferBase();
 	};
 }
 

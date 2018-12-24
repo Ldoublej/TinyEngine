@@ -10,6 +10,10 @@ namespace scene
     /*
      * ---------------------------------------------------Model---------------------------------------------
      * */
+    Model::Model(const char *path, Program *p):_shader(p)
+    {
+        LoadModel(path);
+    }
     void Model::LoadModel(const char *path)
     {
         using namespace Assimp;
@@ -54,7 +58,7 @@ namespace scene
             fullPath = temp + texturePath.data;
 
 
-            auto * image = new Image2D(fullPath.c_str());
+            auto * image = new Image2D(fullPath.c_str(),GL_RGBA,GL_UNSIGNED_BYTE);
             image->Load();
             Texture2D * tex = Texture2D::Create(GL_RGBA,GL_LINEAR_MIPMAP_LINEAR);
 
@@ -67,15 +71,44 @@ namespace scene
     void Model::Draw()
     {
         glUseProgram(_shader->GetBufferID());
-        for(unsigned int i = 0; i < _meshes.size(); ++i)
+        for(auto i : _meshes)
         {
-            _meshes[i]->Draw();
+            i->Draw();
         }
         glUseProgram(0);
     }
+
+    void Model::SetProgram(Program *p)
+    {
+        _shader = p;
+    }
+
+    Program *Model::GetShader() const
+    {
+        return _shader;
+    }
+
+    Material Model::GetMaterial(std::vector<Material>::size_type index) const
+    {
+        if(index > _materials.size()-1)
+        {
+            Material mat = Material();
+            mat.Diffuse = nullptr;
+            return mat;
+        }
+        return _materials.at(index);
+    }
+
+
     /*
      * ---------------------------------------------------Mesh---------------------------------------------
      * */
+    Mesh::Mesh(aiMesh *mesh, const aiScene *scene, Model *model):_mesh(mesh),_scene(scene),
+                                                                 _vao(nullptr),_model(model),_material()
+    {
+        ProcessMesh();
+        ApplyVertex();
+    }
     void Mesh::ProcessMesh()
     {
         for (unsigned int i = 0; i < _mesh->mNumVertices; ++i)
@@ -152,6 +185,8 @@ namespace scene
         }
 
     }
+
+
 
 
 }

@@ -13,7 +13,7 @@ namespace graph {
 	VertexArray * VertexArray::Create(ElementBuffer * ebo)
 	{
 
-		VertexArray * vao = new VertexArray(ebo);
+		auto * vao = new VertexArray(ebo);
 		if (vao->GetBufferID() == 0)
 			return nullptr;
 		return vao;
@@ -21,7 +21,7 @@ namespace graph {
 
 	void VertexArray::AddVertexBuffer(VertexBuffer * vbo)
 	{
-		if (vbo == nullptr && vbo->GetBufferID() == 0)
+		if (vbo == nullptr || vbo->GetBufferID() == 0)
 			return;
 		_vbo_list.push_back(vbo);
 	}
@@ -30,12 +30,12 @@ namespace graph {
 
 	VertexBuffer * VertexArray::GetVertexBuffer(int index)
 	{
-		int size = _vbo_list.size();
+		size_t size = _vbo_list.size();
 		if (index + 1 > size)
 		{
 			return nullptr;
 		}
-		return _vbo_list.at(index);
+		return _vbo_list.at(size);
 	}
 
 	void VertexArray::ApplyVertexAttributes()
@@ -47,11 +47,9 @@ namespace graph {
 			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _ebo->GetBufferID());
 		}
 
-		int vboCount = _vbo_list.size();
-		for (int i = 0; i < vboCount; ++i)
+		for (auto vbo:_vbo_list)
 		{
-			VertexBuffer * vbo = _vbo_list.at(i);
-			int attCount = vbo->GetAttributeCount();
+			std::vector<VBOAttribute>::size_type attCount = vbo->GetAttributeCount();
 
 			for (int j = 0; j < attCount; ++j)
 			{
@@ -92,7 +90,20 @@ namespace graph {
 		glBindVertexArray(0);
 	}
 
+	GLuint VertexArray::GetBufferID() const
+	{
+		return _buffer_id;
+	}
 
-	
+	ElementBuffer *VertexArray::GetElementBuffer() const
+	{
+		return _ebo;
+	}
+
+	std::vector<graph::VertexBuffer *>::size_type VertexArray::GetVertexBufferCount() const
+	{
+		return _vbo_list.size();
+	}
+
 
 }

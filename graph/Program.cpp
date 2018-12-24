@@ -11,51 +11,49 @@ namespace graph
 	}
 	Program * Program::Creat(Shader * vs, Shader * fs)
 	{
-		auto * pro = new Program();
-		if (pro->GetBufferID() == 0)
+		auto * program = new Program();
+		if (program->GetBufferID() == 0)
 			return nullptr;
 
 		if (vs->GetShaderType() != GL_VERTEX_SHADER && fs->GetShaderType() != GL_FRAGMENT_SHADER)
 		{
 			return nullptr;
 		}
-		pro->AddShader(vs);
-		pro->AddShader(fs);
-		return pro;
+		program->AddShader(vs);
+		program->AddShader(fs);
+		return program;
 	}
 	Program * Program::Creat()
 	{
-		auto * pro = new Program();
-		if (pro->GetBufferID() == 0)
+		auto * program = new Program();
+		if (program->GetBufferID() == 0)
 			return nullptr;
-		return pro;
+		return program;
 	}
 	bool Program::Compile()
 	{
 	    //编译shader并附加shader
-
 	    if(_shaders.empty())
 	        return false;
 		bool status = true;
-		for (unsigned int i = 0; i < _shaders.size(); ++i)
+		for(auto shader:_shaders)
 		{
 			bool is_success;
-			Shader * shader = _shaders[i];
 			if(!shader->IsCompile())
-            {
-                is_success = shader->Compile();
-                status = status && is_success;
-            }
-            else
-            {
-                is_success = shader->IsAvailable();
-                status = status && is_success;
-            }
+			{
+				is_success = shader->Compile();
+				status = status && is_success;
+			}
+			else
+			{
+				is_success = shader->IsAvailable();
+				status = status && is_success;
+			}
 
-            if(status)
-            {
-                glAttachShader(_buffer_id, shader->GetBufferID());
-            }
+			if(status)
+			{
+				glAttachShader(_buffer_id, shader->GetBufferID());
+			}
 		}
 		if (!status)
 		{
@@ -64,9 +62,9 @@ namespace graph
 
 		//链接Program
 		glLinkProgram(_buffer_id);
-		GLint is_success;
-		glGetProgramiv(_buffer_id, GL_LINK_STATUS, &is_success);
-		if (!is_success)
+		GLint isSucceed;
+		glGetProgramiv(_buffer_id, GL_LINK_STATUS, &isSucceed);
+		if (!isSucceed)
 		{
 			GLchar ch[1024];
 			glGetProgramInfoLog(_buffer_id, 1024, nullptr, ch);
@@ -132,12 +130,20 @@ namespace graph
 		}
 	}
 
-
-	bool _compare_shader(Shader * shader, GLenum type)
+	GLuint Program::GetBufferID() const
 	{
-		if (shader->GetShaderType() != type)
-			return false;
-		return true;
+		return _buffer_id;
+	}
+
+    Program::~Program()
+    {
+		glDeleteProgram(_buffer_id);
+    }
+
+
+    bool _compare_shader(Shader * shader, GLenum type)
+	{
+		return shader->GetShaderType() == type;
 	}
 
 }

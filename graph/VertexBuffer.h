@@ -37,9 +37,10 @@ namespace graph {
 
 		void AddAttribute( GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const void * pointer,VBOAttribute::AttributeType attributeType = VBOAttribute::SinglePrecisionType);
 		void AddAttribute(VBOAttribute * attributes, int count);
-		VBOAttribute GetAttributeByIndex(int vaoIndex) = delete;
-		VBOAttribute GetAttributeAt(int index) { return _attribute_list.at(index); };
-		int GetAttributeCount() { return _attribute_list.size(); };
+
+
+		VBOAttribute GetAttributeAt(std::vector<VBOAttribute>::size_type index) const;
+		std::vector<VBOAttribute>::size_type GetAttributeCount() const;
 
 		~VertexBuffer() override = default;
 	};

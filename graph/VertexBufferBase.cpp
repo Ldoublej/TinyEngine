@@ -42,4 +42,9 @@ namespace graph {
 		return b;
 	}
 
+	VertexBufferBase::~VertexBufferBase()
+	{
+		glDeleteBuffers(1, &_buffer_id);
+	}
+
 }

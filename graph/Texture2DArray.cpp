@@ -8,7 +8,7 @@ namespace graph
 {
     Texture2DArray *Texture2DArray::Create(GLenum internalFormat, GLenum filter, GLenum wrap)
     {
-        Texture2DArray * tex = new Texture2DArray(internalFormat);
+        auto * tex = new Texture2DArray(internalFormat);
         if (tex->GetBufferID() == 0)
             return nullptr;
 
@@ -26,7 +26,7 @@ namespace graph
         if (width==0 || height == 0 || depth == 0)
                 return;
         glBindTexture(GL_TEXTURE_2D_ARRAY, _buffer_id);
-        glTexStorage3D(GL_TEXTURE_2D_ARRAY, levels,_internalFormat, width, height,depth);
+        glTexStorage3D(GL_TEXTURE_2D_ARRAY, levels,_internal_format, width, height,depth);
         glBindTexture(GL_TEXTURE_2D_ARRAY, 0);
     }
 
@@ -35,7 +35,7 @@ namespace graph
         if (width==0 || height == 0 || depth == 0)
                 return;
         glBindTexture(GL_TEXTURE_2D_ARRAY, _buffer_id);
-        glTexImage3D(GL_TEXTURE_2D_ARRAY, level, _internalFormat, width, height,depth, 0, format, type, data);
+        glTexImage3D(GL_TEXTURE_2D_ARRAY, level, _internal_format, width, height,depth, 0, format, type, data);
         glBindTexture(GL_TEXTURE_2D_ARRAY, 0);
     }
 

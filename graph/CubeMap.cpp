@@ -8,7 +8,7 @@ namespace graph
 {
     CubeMap * CubeMap::Create(GLenum internalFormat, GLenum filter , GLenum wrap)
     {
-        CubeMap * tex = new CubeMap(internalFormat);
+        auto * tex = new CubeMap(internalFormat);
         if (tex->GetBufferID() == 0)
             return nullptr;
 
@@ -26,15 +26,15 @@ namespace graph
         if (width==0 || height == 0)
             return;
         glBindTexture(GL_TEXTURE_CUBE_MAP, _buffer_id);
-        glTexStorage2D(GL_TEXTURE_CUBE_MAP, levels,_internalFormat, width, height);
+        glTexStorage2D(GL_TEXTURE_CUBE_MAP, levels,_internal_format, width, height);
         glBindTexture(GL_TEXTURE_CUBE_MAP, 0);
     }
-    void CubeMap::TexImage(GLint level, GLsizei width, GLsizei height,GLenum format,GLenum type, const void * data)
+    void CubeMap::TexImage(GLenum target,GLint levels, GLsizei width, GLsizei height,GLenum format,GLenum type, const void * data)
     {
         if (width == 0 || height == 0)
             return;
         glBindTexture(GL_TEXTURE_CUBE_MAP, _buffer_id);
-        glTexImage2D(GL_TEXTURE_CUBE_MAP, level, _internalFormat, width, height, 0, format, type, data);
+        glTexImage2D(target, levels, _internal_format, width, height, 0, format, type, data);
         glBindTexture(GL_TEXTURE_CUBE_MAP, 0);
     }
 

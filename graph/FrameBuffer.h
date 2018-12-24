@@ -27,16 +27,10 @@ namespace graph {
 
 	public:
 		static FrameBuffer * Create(GLenum target);
-
-		GLuint GetBufferID() const { return _buffer_id; }
-		GLenum GetBufferType() const { return _framebuffer_type; }
-
-
+		GLuint GetBufferID() const;
+		GLenum GetBufferType() const;
 		void AddAttachment(RenderBufferInfo info);
 		void AddAttachment(GLsizei width, GLsizei height, GLenum internalFormat, GLenum attachment);
-
-
-
 		GLenum GetBufferStatus() ;
 		void PrintFrameBufferStatus(GLenum  status) ;
 

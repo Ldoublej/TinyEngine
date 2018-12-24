@@ -21,43 +21,32 @@ namespace scene
         float _yaw = -90.0f;
         float _roll = 0.0;
     public:
-        Camera():_world(glm::vec3(0.0)),_target(glm::vec3(0.0,0.0,-1.0)),_up(glm::vec3(0.0,1.0,0.0))
-        {
+        Camera():_world(glm::vec3(0.0)),_target(glm::vec3(0.0,0.0,-1.0)),_up(glm::vec3(0.0,1.0,0.0)){}
+        Camera(const  glm::vec3 & world,const glm::vec3 & target ,const glm::vec3 & up = glm::vec3(0.0,1.0,0.0));
+        Camera(float pitch,float yaw,float roll);
 
-        };
-        Camera(const  glm::vec3 & world,const glm::vec3 & target ,const glm::vec3 & up = glm::vec3(0.0,1.0,0.0)):
-        _world(world),_target(target),_up(up)
-        {
-            _target = glm::normalize(_target);
-            _up = glm::normalize(_up);
-        }
-        Camera(float pitch,float yaw,float roll):_pitch(pitch),_yaw(yaw),_roll(roll),
-        _world(glm::vec3(0.0)),_target(glm::vec3(0.0,0.0,-1.0)),_up(glm::vec3(0.0,1.0,0.0))
-        {
-            UpdateVector();
-        }
+        void SetWorld(const glm::vec3 & world);
+        glm::vec3 GetWorld() const;
 
-        void SetWorld(const glm::vec3 & world){_world = world;}
-        glm::vec3 GetWorld(){return _world;}
+        void SetTarget(const glm::vec3 & target);
+        glm::vec3 GetTarget()const;
 
-        void SetTarget(const glm::vec3 & target){_target = glm::normalize(target);}
-        glm::vec3 GetTarget(){return _target;}
+        void SetUp(const glm::vec3 & up);
+        glm::vec3 GetUp() const;
 
-        void SetUp(const glm::vec3 & up){_up = glm::normalize(up);}
-        glm::vec3 GetUp(){return _up;}
+        void SetPitch(float p);
+        float GetPitch() const;
 
-        void SetPitch(float p){_pitch = p;}
-        float GetPitch(){return _pitch;}
+        void SetYaw(float y);
+        float GetYaw() const;
 
-        void SetYaw(float y){_yaw = y;}
-        float GetYaw(){return _yaw;}
-
-        void SetRoll(float r){_roll = r;}
-        float GetRoll(){return _roll;}
+        void SetRoll(float r);
+        float GetRoll() const;
 
 
 
         glm::mat4 GetViewMatrix();
+        glm::mat4 GetViewMatrixWithoutLocation();
         void UpdateVector();
     };
 }

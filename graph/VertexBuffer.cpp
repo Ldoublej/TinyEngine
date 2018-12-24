@@ -34,4 +34,14 @@ namespace graph {
 			_attribute_list.push_back(attributes[i]);
 		}
 	}
+
+	VBOAttribute VertexBuffer::GetAttributeAt(std::vector<VBOAttribute>::size_type index) const
+	{
+		return _attribute_list.at(index);
+	}
+
+	std::vector<VBOAttribute>::size_type VertexBuffer::GetAttributeCount() const
+	{
+		return _attribute_list.size();
+	}
 }

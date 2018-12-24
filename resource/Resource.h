@@ -6,7 +6,7 @@ namespace resource {
 	class Resource
 	{
 	protected:
-		bool _loaded = false;
+		bool _is_load = false;
 	public:
 		virtual bool Load() = 0;
 		virtual void Release() = 0;

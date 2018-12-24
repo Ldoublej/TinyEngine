@@ -29,12 +29,9 @@ namespace graph
 
 		void Unifrom1i(const char * uniform,GLint v0);
 		void Unifrom4fv(const char * uniform,const GLfloat * mat4);
-		GLuint GetBufferID(){return _buffer_id;}
+		GLuint GetBufferID() const;
 
-		~Program()
-		{
-			glDeleteProgram(_buffer_id);
-		}
+		~Program();
 	private:
 		Program();
 	};

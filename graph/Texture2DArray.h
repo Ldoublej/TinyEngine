@@ -13,7 +13,7 @@ namespace graph
     class Texture2DArray:public Texture
     {
     private:
-        explicit Texture2DArray(GLenum internalFormat) :Texture(GL_TEXTURE_2D_ARRAY, internalFormat) { _internalFormat = internalFormat; };
+        explicit Texture2DArray(GLenum internalFormat) :Texture(GL_TEXTURE_2D_ARRAY, internalFormat){};
 
     public:
         static Texture2DArray * Create(GLenum internalFormat, GLenum filter = GL_LINEAR, GLenum wrap = GL_REPEAT);

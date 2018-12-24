@@ -54,12 +54,7 @@ namespace scene
         std::vector<unsigned int> _indices;
 
     private:
-        Mesh(aiMesh * mesh ,const aiScene * scene,Model * model):_mesh(mesh),_scene(scene),_vao(nullptr),_model(model),
-        _material()
-        {
-            ProcessMesh();
-            ApplyVertex();
-        }
+        Mesh(aiMesh * mesh ,const aiScene * scene,Model * model);
         void ProcessMesh();
         void ApplyVertex();
         void Draw();
@@ -76,30 +71,11 @@ namespace scene
         Program * _shader;
 
     public:
-        explicit Model(const char * path,Program * p):_shader(p)
-        {
-            LoadModel(path);
-        };
-        void SetProgram(Program * p){_shader = p;}
-        Program * GetShader()
-        {
-            return _shader;
-        }
-
+        explicit Model(const char * path,Program * p);
+        void SetProgram(Program * p);
+        Program * GetShader() const;
         void Draw();
-
-        Material GetMaterial(unsigned int index)
-        {
-            if(index > _materials.size()-1)
-            {
-                Material mat = Material();
-                mat.Diffuse = nullptr;
-                return mat;
-            }
-            return _materials.at(index);
-        }
-
-
+        Material GetMaterial(std::vector<Material>::size_type index) const;
 
     private:
         void LoadModel(const char * path);
