@@ -4,6 +4,7 @@
 #include <GL/glew.h>
 #include <vector>
 #include <stdio.h>
+#include "Texture2D.h"
 
 namespace graph {
 
@@ -11,8 +12,8 @@ namespace graph {
 	{
 		GLsizei width;
 		GLsizei height;
-		GLenum attachment;
 		GLenum internalFormat;
+		GLenum attachment;
 	};
 
 
@@ -30,9 +31,10 @@ namespace graph {
 		GLuint GetBufferID() const;
 		GLenum GetBufferType() const;
 		void AddAttachment(RenderBufferInfo info);
+		void AddAttachment(Texture2D * texture,GLenum attachment);
 		void AddAttachment(GLsizei width, GLsizei height, GLenum internalFormat, GLenum attachment);
-		GLenum GetBufferStatus() ;
-		void PrintFrameBufferStatus(GLenum  status) ;
+		GLenum CheckStatus() const;
+		static void PrintFrameBufferStatus(GLenum  status);
 
 		~FrameBuffer();
 	};

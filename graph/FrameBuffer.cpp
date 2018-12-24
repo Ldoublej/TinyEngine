@@ -40,8 +40,16 @@ namespace graph{
 		info.attachment = attachment;
 		AddAttachment(info);
 	}
+	void FrameBuffer::AddAttachment(Texture2D *texture, GLenum attachment)
+	{
+		glBindFramebuffer(_framebuffer_type, _buffer_id);
 
-	GLenum FrameBuffer::GetBufferStatus() 
+		glFramebufferTexture2D(GL_FRAMEBUFFER, attachment, GL_TEXTURE_2D, texture->GetBufferID(), 0);
+		glDrawBuffer(GL_NONE);
+		glReadBuffer(GL_NONE);
+		glBindFramebuffer(_framebuffer_type, 0);
+	}
+	GLenum FrameBuffer::CheckStatus() const
 	{
 		glBindFramebuffer(_framebuffer_type, _buffer_id);
 
@@ -105,5 +113,7 @@ namespace graph{
 	{
 		return _buffer_id;
 	}
+
+
 
 }
