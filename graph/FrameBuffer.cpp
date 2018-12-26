@@ -26,7 +26,6 @@ namespace graph{
 		glGenRenderbuffers(1, &renderBuffer);
 		glBindRenderbuffer(GL_RENDERBUFFER, renderBuffer);
 		glRenderbufferStorage(GL_RENDERBUFFER, info.internalFormat, info.width, info.height);
-
 		glFramebufferRenderbuffer(_framebuffer_type, info.attachment, GL_RENDERBUFFER, renderBuffer);
 		glBindRenderbuffer(GL_RENDERBUFFER, 0);
 		glBindFramebuffer(_framebuffer_type,0);

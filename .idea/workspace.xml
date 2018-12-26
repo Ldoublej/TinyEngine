@@ -17,7 +17,6 @@
     <list default="true" id="5abf389b-198e-4ab8-b527-2f3dd20510ac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/graph/FrameBuffer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/graph/FrameBuffer.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/FrameBuffer.h" beforeDir="false" afterPath="$PROJECT_DIR$/graph/FrameBuffer.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -43,24 +42,15 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="156" column="22" selection-start-line="156" selection-start-column="22" selection-end-line="156" selection-end-column="22" />
+            <state relative-caret-position="722">
+              <caret line="143" selection-start-line="143" selection-end-line="143" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/graph/FrameBuffer.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -160,16 +150,6 @@
             <path>
               <item name="simple-ogl" type="b2602c69:ProjectViewProjectNode" />
               <item name="simple-ogl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simple-ogl" type="b2602c69:ProjectViewProjectNode" />
-              <item name="simple-ogl" type="462c0819:PsiDirectoryNode" />
-              <item name="graph" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simple-ogl" type="b2602c69:ProjectViewProjectNode" />
-              <item name="simple-ogl" type="462c0819:PsiDirectoryNode" />
-              <item name="scene" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -374,12 +354,17 @@
       <workItem from="1545574150420" duration="1664000" />
       <workItem from="1545628906738" duration="329000" />
       <workItem from="1545638792160" duration="4008000" />
-      <workItem from="1545654075378" duration="6215000" />
+      <workItem from="1545654075378" duration="6291000" />
+      <workItem from="1545736288591" duration="1589000" />
+      <workItem from="1545738132045" duration="2267000" />
+      <workItem from="1545741311779" duration="3073000" />
+      <workItem from="1545803390386" duration="678000" />
+      <workItem from="1545808390811" duration="260000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173986000" />
+    <option name="totallyTimeSpent" value="181929000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -394,12 +379,12 @@
     <frame x="0" y="0" width="1600" height="850" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23684211" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25224647" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32823366" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49899125" visible="true" weight="0.2364395" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49899125" weight="0.2364395" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39499304" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -546,13 +531,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph/Program.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2244">
-          <caret line="132" column="4" selection-start-line="132" selection-start-column="4" selection-end-line="132" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -715,17 +693,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/graph/Program.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2244">
+          <caret line="132" column="39" lean-forward="true" selection-start-line="132" selection-start-column="39" selection-end-line="132" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/graph/FrameBuffer.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+        <state relative-caret-position="391">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="156" column="22" selection-start-line="156" selection-start-column="22" selection-end-line="156" selection-end-column="22" />
+        <state relative-caret-position="722">
+          <caret line="143" selection-start-line="143" selection-end-line="143" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
