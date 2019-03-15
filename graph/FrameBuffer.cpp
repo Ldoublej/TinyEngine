@@ -44,8 +44,6 @@ namespace graph{
 		glBindFramebuffer(_framebuffer_type, _buffer_id);
 
 		glFramebufferTexture2D(GL_FRAMEBUFFER, attachment, GL_TEXTURE_2D, texture->GetBufferID(), 0);
-		glDrawBuffer(GL_NONE);
-		glReadBuffer(GL_NONE);
 		glBindFramebuffer(_framebuffer_type, 0);
 	}
 	GLenum FrameBuffer::CheckStatus() const

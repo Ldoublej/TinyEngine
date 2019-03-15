@@ -29,20 +29,17 @@ namespace graph {
 		std::vector<VBOAttribute> _attribute_list;
 
 		/*------------------------------------------------------------------------*/
-	private:
-		VertexBuffer() :VertexBufferBase(GL_ARRAY_BUFFER) {}
 
 	public:
 		static VertexBuffer * Create();
-
 		void AddAttribute( GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const void * pointer,VBOAttribute::AttributeType attributeType = VBOAttribute::SinglePrecisionType);
 		void AddAttribute(VBOAttribute * attributes, int count);
-
-
 		VBOAttribute GetAttributeAt(std::vector<VBOAttribute>::size_type index) const;
 		std::vector<VBOAttribute>::size_type GetAttributeCount() const;
-
 		~VertexBuffer() override = default;
+
+	private:
+		VertexBuffer() :VertexBufferBase(GL_ARRAY_BUFFER) {}
 	};
 
 }

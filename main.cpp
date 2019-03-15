@@ -10,6 +10,9 @@
 #include "scene/Model.h"
 #include "scene/SkyBox.h"
 #include "graph/FrameBuffer.h"
+#include <imgui/imgui.h>
+#include <imgui/imgui_impl_glfw.h>
+#include <imgui/imgui_impl_opengl3.h>
 
 scene::Camera * camera = new scene::Camera();
 float lastX = 400, lastY = 300;
@@ -86,7 +89,7 @@ int main()
     if (err != GLEW_OK )
     {
         fprintf(stderr, "Error: %s\n", glewGetErrorString(err));
-        exit (-2);
+        exit(-2);
     }
 
     glViewport(0, 0, 800, 600);
@@ -114,7 +117,7 @@ int main()
     baseShader->Compile();
     depthShader->Compile();
 
-    //skybox
+    //load skybox
     Image2D * iamges[] = {
             new Image2D("textures/skybox/Right.jpg",GL_RGB,GL_UNSIGNED_BYTE),
             new Image2D("textures/skybox/Left.jpg",GL_RGB,GL_UNSIGNED_BYTE),
@@ -139,7 +142,7 @@ int main()
 
     FrameBuffer * depthFbo = FrameBuffer::Create(GL_FRAMEBUFFER);
     Texture2D * depthTex = Texture2D::Create(GL_DEPTH_COMPONENT,GL_LINEAR,GL_REPEAT);
-    depthTex->TexImage(0,800,600,GL_DEPTH_COMPONENT,GL_FLOAT, nullptr);
+    depthTex->TexImage(0,1600,1200,GL_DEPTH_COMPONENT,GL_FLOAT, nullptr);
     depthFbo->AddAttachment(depthTex,GL_DEPTH_ATTACHMENT);
 
     glm::mat4 lightProjection = glm::ortho(-20.0f, 20.0f, -20.0f, 20.0f, 0.0f, 100.0f);
@@ -150,7 +153,8 @@ int main()
 
     glm::mat4 lightSpace = lightProjection * lightView;
     baseShader->Unifrom4fv("LightSpace",&lightSpace[0][0]);
-    while (!glfwWindowShouldClose(_window))
+
+    while(!glfwWindowShouldClose(_window))
     {
         processInput(_window);
 
@@ -160,10 +164,8 @@ int main()
         baseShader->Unifrom4fv("V",&baseView[0][0]);
 
 
-
-
         glBindFramebuffer(GL_FRAMEBUFFER,depthFbo->GetBufferID());
-        glViewport(0, 0, 800, 600);
+        glViewport(0, 0, 1600, 1200);
         glClearDepth(1.0f);
         glClear(GL_DEPTH_BUFFER_BIT);
         glCullFace(GL_FRONT);
@@ -176,7 +178,7 @@ int main()
 
 
         glViewport(0, 0, 800, 600);
-        glClearColor(0.2, 0.2, 0.3, 1.0);
+        glClearColor(0.0,0.0,0.0, 1.0);
         glClearDepth(1.0f);
         glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 

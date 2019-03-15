@@ -20,7 +20,6 @@ namespace graph {
 		GLuint GetBufferID() const;
 		GLenum GetBufferType() const;
 		GLenum GetInternalFormat() const;
-
 		virtual ~Texture();
 	};
 

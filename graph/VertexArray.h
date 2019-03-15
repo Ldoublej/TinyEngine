@@ -14,20 +14,21 @@ namespace graph{
 		std::vector<VertexBuffer *> _vbo_list;
 		ElementBuffer * _ebo;
 
-	private:
-		explicit VertexArray(ElementBuffer * ebo);
 
+		//*---------------------------------------------------------------*//
 	public:
 		static VertexArray * Create(ElementBuffer * ebo);
 		void AddVertexBuffer(VertexBuffer * vbo);
-
-
 		void SetElementBuffer(ElementBuffer * ebo);
 		ElementBuffer * GetElementBuffer() const;
 		VertexBuffer * GetVertexBuffer(int index);
         std::vector<graph::VertexBuffer *>::size_type GetVertexBufferCount() const;
 		GLuint GetBufferID() const;
 		void ApplyVertexAttributes();
+
+	private:
+		explicit VertexArray(ElementBuffer * ebo);
+
 	};
 
 }
